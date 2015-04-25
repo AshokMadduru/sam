@@ -87,11 +87,12 @@ class MainPage(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('home.html')
         self.response.write(template.render(template_values))
 
-class Data(webapp2.RequestHandler):
+class getPyData(webapp2.RequestHandler):
     def post(self):
         username = self.request.get("user")
-        data = self.request.get('logger_name',"pyKey")
-        data_query = Chrome.query(ancestor = browser_key(data))
+        pykeydata = self.request.get('logger_name',"pyKey")
+        qry = PyKeyLogger.query(ancestor = pyKeyLogger_key(pykeydata))
+        data_query = qry.filter(PyKeyLogger.userName == username)
         dataa = data_query.fetch()
         global result
         result = []
@@ -99,11 +100,41 @@ class Data(webapp2.RequestHandler):
             result.append(row)
         chrome_data= {}
         chrome_data['data'] = result
-        self.response.write(len(result))
+        self.response.write(result[0])
+
+class getChrome(webapp2.RequestHandler):
+    def get(self):
+        template_values = {}
+        template = JINJA_ENVIRONMENT.get_template('sample.html')
+        self.response.write(template.render(template_values))
+       # mail = self.request.get("email")
+##        chromedata = self.request.get('browser_name',"chrome_data")
+##        qry = Chrome.query(ancestor = browser_key(chromedata))
+##        data_query = qry.filter(Chrome.email == mail)
+##        dataa = data_query.fetch()
+##        global result
+##        result = []
+##        for row in dataa:
+##            temp = {}
+##            temp['evenType'] = row.eventType
+##            temp['urlLink'] = row.urlLink
+##            temp['datas'] = row.datas
+##            temp['timeStamp'] = row.timeStamp
+##            temp['email'] = row.email
+##            result.append(temp)
+##        chrome_data= {'data':result}
+##        self.response.write(json.dumps(chrome_data))
+        #self.response.write(mail)
+class GetMail(webapp2.RequestHandler):
+    def post(self):
+        mail = self.request.get("email")
+        self.response.write(mail)
 app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/chrome',ChromeData),
     ('/keydata',KeyData),
-    ('/getchromedata',Data),
+    ('/getpydata',getPyData),
+    ('/getchromedata',getChrome),
+    ('/getMail',GetMail),
 ], debug=True)
 
