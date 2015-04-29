@@ -94,10 +94,10 @@ class MetaData (ndb.Model):
 #Saving metadata into the database
 class SaveMetaData(webapp2.RequestHandler):
     def post(self):
-        url = self.request.get("url")
-        title = self.request.get("title")
-        duration = self.request.get("duration")
-        typee = self.request.get("type")
+##        url = self.request.get("url")
+##        title = self.request.get("title")
+##        duration = self.request.get("duration")
+##        typee = self.request.get("type")
         
         wb = load_workbook(filename='Lesson-1 Metadata.xlsx', read_only=True)
         ws = wb['Sheet1'] # ws is now an IterableWorksheet
