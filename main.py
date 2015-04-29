@@ -9,6 +9,7 @@ import datetime
 import jinja2
 import os
 import json
+from openpyxl import load_workbook
 
 # Setting up the Jinja environment to include html pages as templates
 JINJA_ENVIRONMENT = jinja2.Environment(
@@ -83,6 +84,40 @@ class KeyData(webapp2.RequestHandler):
         else:
             self.response.write('no')
         self.response.write('Responding...')
+#Metadata entity
+class MetaData (ndb.Model):
+    url = ndb.StringProperty(indexed = True)
+    title = ndb.StringProperty(indexed = True)
+    duration = ndb.StringProperty(indexed = False)
+    typee = ndb.StringProperty(indexed = False)
+    quiztype = ndb.StringProperty(indexed = False)
+#Saving metadata into the database
+class SaveMetaData(webapp2.RequestHandler):
+    def post(self):
+        url = self.request.get("url")
+        title = self.request.get("title")
+        duration = self.request.get("duration")
+        typee = self.request.get("type")
+        
+        wb = load_workbook(filename='Lesson-1 Metadata.xlsx', read_only=True)
+        ws = wb['Sheet1'] # ws is now an IterableWorksheet
+
+        for row in ws.rows:
+            list = []
+            for cell in row:
+                list.append(cell)
+            if list[0] is not None:
+                metaData = self.request.get('metadata',"meta")
+                data = MetaData(parent = MetaData_key(metaData))
+                data.url = list[0]
+                data.title= list[1]
+                data.duration = list[2]
+                data.typee = list[3]
+                data.quiztype = list[4]
+                data.put()
+            else:
+                self.response.write('no')
+        self.response.write('Success!!')
 class MainPage(webapp2.RequestHandler):
     def get(self):
         #self.response.write('Hello world!')
