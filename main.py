@@ -205,7 +205,7 @@ class DashBoard(webapp2.RequestHandler):
             for row in data:
                 if row.email not in resu and '@' in row.email:
                     resu.append(row.email)
-                    html = html + "<tr><td>"+str(count)+"</td><td>"+row.email+"</td></tr>"
+                    html = html + "<tr><td>"+str(count)+"</td><td><a href = http://student-monitor.appspot.com/getstudeta?email="+row.email+">"+row.email+"</a></td></tr>"
                     count = count+1
             user_list = {'users':resu}
             html = html+"</table></div></body></html>"
@@ -340,16 +340,20 @@ class GetAllUrls(webapp2.RequestHandler):
             """
             global c
             c = 1
+            global cc
+            cc = 1
             for uRl in data:
+                if cc>30:
+                    break
+                cc =cc +1
                 link = uRl.url
                 count_qry = "SELECT timeStamp FROM Chrome WHERE urlLink='"+link+"'"
                 count_query = ndb.gql(count_qry)
                 count_data = count_query.fetch()
-                global count
                 count = 0
                 for row in count_data:
                     count = count+1
-                htmll = htmll+"<tr><td>"+c+"</td><td>"+link+"</td><td>"+count+"</td></tr>"
+                htmll = htmll+"<tr><td>"+str(c)+"</td><td>"+link+"</td><td>"+str(count)+"</td></tr>"
                 c = c+1
 ####            
 ####            count = 1
@@ -359,8 +363,8 @@ class GetAllUrls(webapp2.RequestHandler):
 ####                    html = html + "<tr><td>"+str(count)+"</td><td>"+row.email+"</td></tr>"
 ####                    count = count+1
 ####            user_list = {'users':resu}
-            html = html+"</table></div></body></html>"
-            self.response.write(html)
+            htmll = htmll+"</table></div></body></html>"
+            self.response.write(htmll)
         except Exception ,e:
             self.response.write(str(e))
 
@@ -398,6 +402,35 @@ class GetUrlData(webapp2.RequestHandler):
         chrome_data= {'data':result}
         self.response.write(HTML)
         #self.response.write(mail)
+class getStuData(webapp2.RequestHandler):
+    def get(self):
+        mail = self.request.get("email")
+        self.response.write(mail)
+        try:
+            qry = "SELECT * FROM Meta"
+            data_query = ndb.gql(qry)
+            data = data_query.fetch()
+            HTML = """\
+            <html>
+              <body border=\"1\" style=\"width:100%\">
+                <div>
+                <table>
+                <tr><th>Chapter</th><th>Title</th><th>Url</th><th>Type</th><th>Count</th></tr>
+        
+            """
+            for row in data:
+                url = row.url
+                users_qry = "SELECT timeStamp FROM Chrome WHERE email='"+mail+"' AND urlLink='"+url+"'"
+                users_data_query = ndb.gql(users_qry)
+                users_data = users_data_query.fetch()
+                count = 0
+                for t in users_data:
+                    count = count+1
+                HTML = HTML+"<tr><td>"+row.chapter+"</td><td>"+row.title+"</td><td>"+url+"</td><td>"+row.type+"</td><td>"+str(count)+"</td</tr>"
+            HTML = HTML+"</table></div></body></html>"
+            self.response.write(HTML)
+        except Exception, e:
+            self.response.write(str(e))
 app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/chrome',ChromeData),
@@ -412,4 +445,5 @@ app = webapp2.WSGIApplication([
     ('/dashboard',DashBoard),
     ('/geturldata',GetUrlData),
     ('/geturls',GetAllUrls),
+    ('/getstudeta',getStuData),
 ], debug=True)
