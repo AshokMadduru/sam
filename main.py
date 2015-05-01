@@ -12,6 +12,8 @@ import os
 import json
 import datetime
 
+from Intermediate import Student,student_key,Url,eventData
+
 # Setting up the Jinja environment to include html pages as templates
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -36,19 +38,33 @@ class Chrome(ndb.Model):
 class ChromeData(webapp2.RequestHandler):
     def post(self):
         mail = self.request.get("email")
-        event_type = self.request.get("eventType")
+        eventType = self.request.get("eventType")
         url_link = self.request.get("urlLink")
         datass = self.request.get("datas")
         date = self.request.get("timeStamp")
         if mail is not None:
-            browser = self.request.get('browser_name',NAME)
-            data = Chrome(parent = browser_key(browser))
-            data.email = mail
-            data.eventType = event_type
-            data.urlLink = url_link
-            data.datas = datass
-            data.timeStamp = date
-            data.put()
+##            browser = self.request.get('browser_name',NAME)
+##            data = Chrome(parent = browser_key(browser))
+##            data.email = mail
+##            data.eventType = eventType
+##            data.urlLink = url_link
+##            data.datas = datass
+##            data.timeStamp = date
+##            data.put()
+
+            try:
+                stu = self.request.get('student',"student")
+                student = Student(parent = student_key(stu))
+                student.email = mail
+                student.uRl = Url(url = url_link,
+                    eventdata = eventData(eventData = datass,
+                                          eventTime = date,
+                                          eventtype = eventType))
+
+                student.put()
+                self.response.write('success')
+            except Exception, e:
+                self.response.write(str(e))
         else:
             self.response.write('no')
         self.response.write('Success...')
@@ -205,7 +221,7 @@ class DashBoard(webapp2.RequestHandler):
             for row in data:
                 if row.email not in resu and '@' in row.email:
                     resu.append(row.email)
-                    html = html + "<tr><td>"+str(count)+"</td><td><a href = http://student-monitor.appspot.com/getstudeta?email="+row.email+">"+row.email+"</a></td></tr>"
+                    html = html + "<tr><td>"+str(count)+"</td><td><a href = http://student-monitor.appspot.com/student/getEmail?email="+row.email+" target = _blank>"+row.email+"</a></td></tr>"
                     count = count+1
             user_list = {'users':resu}
             html = html+"</table></div></body></html>"
@@ -283,7 +299,7 @@ class Meta(ndb.Model):
 ## class for storing metadata
 class StoreMeta(webapp2.RequestHandler):
     def post(self):
-        chap = "3"
+        chap = "1 Problem set"
         uRl = self.request.get("url")
         tiTle = self.request.get("title")
         tyPe = self.request.get("type")
@@ -302,18 +318,7 @@ class StoreMeta(webapp2.RequestHandler):
             self.response.write("success")
         else:
             self.response.write("failed")
-## model for student database
-def student_key(student = "student"):
-    return ndb.Key("StudentData",student)
-## model for url
-class Url(ndb.Model):
-    url = ndb.StringProperty(indexed = True)
-    count = ndb.IntegerProperty(indexed = False)
-    ts = ndb.StructuredProperty(Timings)
-## model for student
-class Student(ndb.Model):
-    name = ndb.StringProperty(indexed = True)
-    uRl = ndb.StructuredProperty(Url)
+
 ## storing student data
 class GetAllUrls(webapp2.RequestHandler):
     def get(self):
@@ -407,7 +412,7 @@ class getStuData(webapp2.RequestHandler):
         mail = self.request.get("email")
         self.response.write(mail)
         try:
-            qry = "SELECT * FROM Meta"
+            qry = "SELECT * FROM Meta ORDER BY chapter"
             data_query = ndb.gql(qry)
             data = data_query.fetch()
             HTML = """\

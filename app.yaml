@@ -9,9 +9,13 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: /meta/.*
-  script: Intermediate.app
-- url: .*
+- url: /student/.*
+  script: student.app
+  
+- url: /interm/.*
+  script: Intermediate.interm
+
+- url: /.*
   script: main.app
 
 libraries:
