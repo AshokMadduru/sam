@@ -1,0 +1,5 @@
+cron:
+- description: Migrates the Chrome data into Students table
+  url: /dump
+  schedule: 2 of may 17:56
+  timezone: Asia/Kolkata

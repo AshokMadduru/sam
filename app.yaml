@@ -11,6 +11,9 @@ handlers:
 
 - url: /student/.*
   script: student.app
+
+- url: /meta/.*
+  script: Meta.app
   
 - url: /interm/.*
   script: Intermediate.interm
