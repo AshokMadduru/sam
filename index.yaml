@@ -5,6 +5,11 @@ indexes:
   - name: timeStamp
     direction: desc
 - kind: Chrome
+  ancestor: yes
+  properties:
+  - name: email
+  - name: timeStamp
+- kind: Chrome
   properties:
   - name: urlLink
   - name: timeStamp
@@ -22,6 +27,12 @@ indexes:
   properties:
   - name: url
   - name: chapter
+- kind: Student
+  ancestor: yes
+  properties:
+  - name: email
+  - name: uRl.eventdata.eventTime
+    direction: desc
 - kind: Chrome
   properties:
   - name: email

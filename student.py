@@ -9,6 +9,7 @@ from google.appengine.ext import ndb
 from main import Chrome
 from Intermediate import Student,student_key,eventData,Url,Student
 from Meta import Meta,metaData_key
+from Duration import DayDuration
 
 
 
@@ -35,9 +36,6 @@ class GetEmail(webapp2.RequestHandler):
         try:
             mail = self.request.get("email")
 
-            d = str(datetime.date.today())
-            dt = "01/04/2015 00:00:00"#d[-2:]+'/'+d[5:7]+'/'+d[:4]+' 00:00:00'
-
             qry = "SELECT urlLink,timeStamp FROM Chrome WHERE email='"+mail+"' ORDER BY timeStamp DESC"
             data_query = ndb.gql(qry)
             data = data_query.fetch()
@@ -52,6 +50,7 @@ class GetEmail(webapp2.RequestHandler):
             count = 0
             global dataLength
             dataLength = len(data)
+            
             for row in data:
                 uRl = row.urlLink
                 time = row.timeStamp
@@ -59,14 +58,16 @@ class GetEmail(webapp2.RequestHandler):
                     url = uRl
                     start_time = datetime.datetime.strptime(time,'%d/%m/%Y %H:%M:%S')
                 elif count == dataLength-1:
-                    duration = start_time - datetime.datetime.strptime(time,'%d/%m/%Y %H:%M:%S')
+                    end_time = datetime.datetime.strptime(time,'%d/%m/%Y %H:%M:%S')
+                    duration = start_time - end_time
                     if url in result_list:
                         result_list[url][0] = result_list[url][0]+duration
                     else:
                         result_list[url] = [duration,start_time]
                 else:
+                    end_time = datetime.datetime.strptime(time,'%d/%m/%Y %H:%M:%S')
                     if uRl != url:
-                        duration = start_time - datetime.datetime.strptime(time,'%d/%m/%Y %H:%M:%S')
+                        duration = start_time - end_time
                         if url in result_list:
                             result_list[url][0] = result_list[url][0]+duration
                         else:
@@ -74,7 +75,6 @@ class GetEmail(webapp2.RequestHandler):
                         url = uRl
                         start_time = datetime.datetime.strptime(time,'%d/%m/%Y %H:%M:%S')
                 count = count+1
-            
             table_2 = "SELECT * FROM Student WHERE email='"+mail+"""'
                         ORDER BY uRl.eventdata.eventTime DESC"""
             table_2_qry = ndb.gql(table_2)
@@ -94,20 +94,23 @@ class GetEmail(webapp2.RequestHandler):
                     urll = uRl
                     start_timee = datetime.datetime.strptime(time,'%d/%m/%Y %H:%M:%S')
                 elif countt == datalength-1:
-                    durationn = start_timee - datetime.datetime.strptime(time,'%d/%m/%Y %H:%M:%S')
+                    end_timee = datetime.datetime.strptime(time,'%d/%m/%Y %H:%M:%S')
+                    durationn = start_timee - end_timee
                     if urll in result_list:
                         result_list[urll][0] = result_list[urll][0]+durationn
                     else:
                         result_list[urll] = [durationn,start_timee]
                 else:
+                    end_timee = datetime.datetime.strptime(time,'%d/%m/%Y %H:%M:%S')
                     if uRl != urll:
-                        durationn = start_timee - datetime.datetime.strptime(time,'%d/%m/%Y %H:%M:%S')
+                        durationn = start_timee - end_timee
                         if urll in result_list:
                             result_list[urll][0] = result_list[urll][0]+durationn
                         else:
                             result_list[urll] = [durationn,start_timee]
                         urll = uRl
                         start_timee = datetime.datetime.strptime(time,'%d/%m/%Y %H:%M:%S')
+                        
                 countt = countt+1
             qry = "SELECT * FROM Meta ORDER BY chapter,moduleNo"
             data_query = ndb.gql(qry)

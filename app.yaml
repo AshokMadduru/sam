@@ -9,6 +9,18 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+- url: /bootstrap
+  static_dir: bootstrap
+
+- url: /calc.*
+  script: calculations.app
+
+- url: /cron/.*
+  script: Cron.app
+
+- url: /duration/.*
+  script: Duration.app
+
 - url: /student/.*
   script: student.app
 

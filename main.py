@@ -14,6 +14,7 @@ import datetime
 
 from Intermediate import Student,student_key,Url,eventData
 from Intermediate import Students,students_key,URL
+from Duration import DayDuration
 
 # Setting up the Jinja environment to include html pages as templates
 JINJA_ENVIRONMENT = jinja2.Environment(
@@ -149,13 +150,13 @@ class GetMail(webapp2.RequestHandler):
           <body border=\"1\" style=\"width:100%\">
             <div>
             <table>
-            <tr><th>TimeStamp</th><th>Url</th><th>url</th></tr>
+            <tr><th>TimeStamp</th><th>Url</th><th>eventdata</th><th>eventtype</th></tr>
         
         """
         global count
         count = 0
         for row in data:
-            HTML = HTML+"<tr><td>"+row.uRl.eventdata.eventTime+"</td><td>"+row.uRl.url+"</td></tr>"
+            HTML = HTML+"<tr><td>"+row.uRl.eventdata.eventTime+"</td><td>"+row.uRl.url+"</td><td>"+row.uRl.eventdata.eventData+"</td><td>"+row.uRl.eventdata.eventtype+"</td></tr>"
         HTML = HTML+"</table></div></body></html>"
         self.response.write(HTML)
         #self.response.write(mail)
@@ -183,10 +184,18 @@ class DashBoard(webapp2.RequestHandler):
         global html
         html = """\
         <html>
-          <body border=\"1\" style=\"width:100%\"><h1>List of Students</h1>
+            <head>
+                <meta charset = "utf-8">
+		<meta http-equiv = "X-UA-Compatible" content = "IE-edge">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1">
+		<title>DashBoard</title>
+		<!-- Bootstrap -->
+		<link type = "text/css" href = "/bootstrap/bootstrap.min.css" rel = "stylesheet">
+            </head>
+          <body><h1>Compilers course</h1><h3>(From Mar-27)</h3>
             <div>
-            <table>
-            <tr><th>Sl No</th><th>Student Email</th></tr>
+            <table class="table table-striped">
+            <tr><th>Sl No</th><th>Student Email</th>
         
         """
         try:
@@ -195,14 +204,42 @@ class DashBoard(webapp2.RequestHandler):
             data = data_query.fetch()
             global resu
             resu = []
+            global count
             count = 1
+            today = datetime.date.today()
+            start = datetime.datetime.strptime('27-04-2015','%d-%m-%Y').date()
+            while(start<today):
+                html = html+"<th>"+datetime.datetime.strftime(start,'%d/%m/%Y')[:2]+"</th>"
+                start = start+datetime.timedelta(days=1)
+            html = html+"</tr>"
             for row in data:
                 if row.email not in resu and '@' in row.email:
-                    resu.append(row.email)
-                    html = html + "<tr><td>"+str(count)+"</td><td><a href = http://student-monitor.appspot.com/student/getEmail?email="+row.email+" target = _blank>"+row.email+"</a></td></tr>"
-                    count = count+1
-            user_list = {'users':resu}
-            html = html+"</table></div></body></html>"
+                    try:
+                        qry = "SELECT * FROM DayDuration WHERE email='"+row.email+"'"
+                        duration_query = ndb.gql(qry)
+                        duration = duration_query.fetch()
+                        data_dict = {} 
+                        for row in duration:
+                            data_dict[row.date] = row.duration
+                        html = html + "<tr><td>"+str(count)+"""</td><td><a href = http://student-monitor.appspot.com/student/getEmail?
+                                    email="""+row.email+" target = _blank>"+row.email+"</a></td>"
+                        start = datetime.datetime.strptime('27-04-2015','%d-%m-%Y').date()
+                        while(start<today):
+                            if datetime.datetime.strftime(start,'%d/%m/%Y') in data_dict:
+                                html = html+"<td>"+data_dict[datetime.datetime.strftime(start,'%d/%m/%Y')][:4]+"</td>"
+                            else:
+                                html = html+"<td>0</td>"
+                            start = start+datetime.timedelta(days=1)
+                        html = html+"</tr>"
+                    except Exception,e:
+                        self.response.write(str(e))            
+                count = count+1
+            html = html+"""</table></div>
+                            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+                            <!-- Include all compiled plugins (below), or include individual files as needed -->
+                            <script src="/bootstrap/bootstrap.min.js"></script>
+                            </body></html>"""
             self.response.write(html)
         except Exception , e:
             self.response.write(str(e))
@@ -385,6 +422,28 @@ class Dump(webapp2.RequestHandler):
                 self.response.write(str(e))
         else:
             self.response.write('no')
+## Get mail replica changed to mailget
+class MailGet(webapp2.RequestHandler):
+    def post(self):
+        mail = self.request.get("email")
+        date1 = self.request.get("date1")
+        date2 = self.request.get("date2")
+
+        qry = "SELECT * FROM Student WHERE email='"+mail+"""'
+                        AND uRl.eventdata.eventTime>'"""+date1+"' AND uRl.eventdata.eventTime<'"+date2+"'"
+        data_query = ndb.gql(qry)
+        data = data_query.fetch()
+        global count
+        global start_time
+        global end_time
+        count = 0
+        for row in data:
+            if count == 0:
+                start_time = row.uRl.eventdata.eventTime
+            elif count == len(data)-1:
+                end_time = row.uRl.eventdata.eventTime
+            count = count+1
+        self.response.write(start_time+" "+end_time)
 app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/chrome',ChromeData),
@@ -399,4 +458,5 @@ app = webapp2.WSGIApplication([
     ('/geturls',GetAllUrls),
     ('/getstudeta',getStuData),
     ('/dump',Dump),
+    ('/mailGet',MailGet),
 ], debug=True)
