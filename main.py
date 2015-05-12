@@ -215,6 +215,8 @@ class DashBoard(webapp2.RequestHandler):
             for row in data:
                 if row.email not in resu and '@' in row.email:
                     try:
+                        userName = row.email[:row.email.find('@')]
+                        
                         qry = "SELECT * FROM DayDuration WHERE email='"+row.email+"'"
                         duration_query = ndb.gql(qry)
                         duration = duration_query.fetch()
@@ -222,7 +224,7 @@ class DashBoard(webapp2.RequestHandler):
                         for row in duration:
                             data_dict[row.date] = row.duration
                         html = html + "<tr><td>"+str(count)+"""</td><td><a href = http://student-monitor.appspot.com/student/getEmail?
-                                    email="""+row.email+" target = _blank>"+row.email+"</a></td>"
+                                    email="""+row.email+" target = _blank>"+userName+"</a></td>"
                         start = datetime.datetime.strptime('27-04-2015','%d-%m-%Y').date()
                         while(start<today):
                             if datetime.datetime.strftime(start,'%d/%m/%Y') in data_dict:

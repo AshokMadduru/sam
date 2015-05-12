@@ -3,6 +3,7 @@ import jinja2
 import os
 import urllib
 import datetime
+import json
 
 from google.appengine.ext import ndb
 from Intermediate import student_key,Url,eventData,Student
@@ -16,8 +17,8 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 ############################################################
 ## class for Calculating Mean , Mode and Median for one day of all students
 class Maths(webapp2.RequestHandler):
-    def get(self):
-        mail = 'akella.keerthi@gmail.com'
+    def post(self):
+        mail = self.request.get('email')
         #start date
         start = '05/05/2015 00:00:00'
         # end date
@@ -39,6 +40,8 @@ class Maths(webapp2.RequestHandler):
             global url
             global end
             global duration
+            curr_time = datetime.datetime.now()
+            duration = (curr_time - curr_time).seconds
             diffs = []
             tot_data = []
             mode = {}
@@ -48,7 +51,6 @@ class Maths(webapp2.RequestHandler):
                     time = row.uRl.eventdata.eventTime
                     st = time
                     start = datetime.datetime.strptime(time,"%d/%m/%Y %H:%M:%S")
-                    duration = start-start
                 elif count == len(data)-1:
                     time = row.uRl.eventdata.eventTime
                     end = datetime.datetime.strptime(time,"%d/%m/%Y %H:%M:%S")
@@ -77,20 +79,34 @@ class Maths(webapp2.RequestHandler):
                         url = row.uRl.url
                 count = count + 1
             # mean
-            mean = duration/len(data)
+            global mean
+            if len(data) == 0:
+                mean = 0
+            else:
+                mean = duration/len(data)
             # median
+            global median
             sorted_diffs = sorted(diffs)
-            median = sorted_diffs[len(diffs)/2]
+            if len(diffs) == 0:
+                median = 0
+            else:
+                median = sorted_diffs[len(diffs)/2]
             # mode
-            Mode = start-start
-            for record in mode:
-                if mode[record]>Mode:
-                    Mode = mode[record]
+            global Mode
+            if len(data) == 0:
+                Mode = 0
+            else:
+                Mode = start-start
+                for record in mode:
+                    if mode[record]>Mode:
+                        Mode = mode[record]
             # send data to html as template values
-            template_values = {'mean':mean, 'median':median,'mode':Mode}
+            #template_values = {'mean':mean, 'median':median,'mode':Mode}
             # render template
-            template = JINJA_ENVIRONMENT.get_template('calculations.html')
-            self.response.write(template.render(template_values))
+            #template = JINJA_ENVIRONMENT.get_template('calculations.html')
+            #self.response.write(template.render(template_values))
+            values = [mean,median,Mode]
+            self.response.write(json.dumps([str(mean),str(median),str(Mode)]))
         except Exception,e:
             self.response.write('Failed: '+str(e))
 ############################################################
