@@ -56,11 +56,11 @@ class Maths(webapp2.RequestHandler):
                     end = datetime.datetime.strptime(time,"%d/%m/%Y %H:%M:%S")
                     diff = start-end
                     if diff in mode:
-                        mode[str(diff)] = mode[str(diff)]+diff
+                        mode[str(diff)] = mode[str(diff)]+diff.seconds
                     else:
-                        mode[str(diff)] = diff
+                        mode[str(diff)] = diff.seconds
                     duration = duration+diff
-                    diffs.append(str(diff))
+                    diffs.append(str(diff.seconds))
                     tot_data.append([url,time,st,diff])
                 else:
                     if url != row.uRl.url:
@@ -68,11 +68,11 @@ class Maths(webapp2.RequestHandler):
                         end = datetime.datetime.strptime(time,"%d/%m/%Y %H:%M:%S")
                         diff = start-end
                         if diff in mode:
-                            mode[str(diff)] = mode[str(diff)]+diff
+                            mode[str(diff)] = mode[str(diff)]+diff.seconds
                         else:
-                            mode[str(diff)] = diff
+                            mode[str(diff)] = diff.seconds
                         duration = duration+diff
-                        diffs.append(str(diff))
+                        diffs.append(str(diff.seconds))
                         tot_data.append([url,time,st,diff])
                         start = end
                         st = time
