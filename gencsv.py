@@ -1,9 +1,10 @@
+import csv
+import os
 import datetime
 from urlparse import urlparse
 from httplib import HTTPConnection
 import urllib
 import json
-import csv
 
 students = ['a.prathyusha7@gmail.com','akella.keerthi@gmail.com',
             'akkineni.vidya1993@gmail.com','alluriharitha@gmail.com',
@@ -42,28 +43,30 @@ students = ['a.prathyusha7@gmail.com','akella.keerthi@gmail.com',
             'tejaswi72minnu@gmail.com','udaykiran0528@gmail.com',
             'venkatesh.2636@gmail.com','vsurajteja1@gmail.com',
             'vyshnavi.nv29@gmail.com','yeswanth.bhoomireddy@gmail.com',
-            'ylalithvarma.me@gmail.com']	
-url = "http://student-monitor.appspot.com/cron/insert"
-##url = "http://student-monitor.appspot.com/calc/calc"
-##dataa = {}
-##for row in students:
-##    data = urllib.urlencode({"email":row})
-##    resp = urllib.urlopen(url,data)
-##    result = resp.read()
-##    dataa[row] = json.loads(result)["values"]
-##with open('Math.csv','wb') as csvfile:
-##    fieldnames = ['Email','Mean','Median','Mode']
-##    writer = csv.DictWriter(csvfile,fieldnames = fieldnames)
-##    writer.writeheader()
-##    for mail in dataa:
-##        mean = dataa[mail][0]
-##        median = dataa[mail][1]
-##        mode = dataa[mail][2]
-##        writer.writerow({'Email':mail,'Mean':mean,'Median':median,'Mode':mode})
-for row in students:
-    data = urllib.urlencode({"email":'ylalithvarma.me@gmail.com'})
-    resp = urllib.urlopen(url,data)
-    result = resp.read()
-    print(row+" "+result)
-print('completed')
+            'ylalithvarma.me@gmail.com']
+url = "http://student-monitor.appspot.com/csv/"
+if not os.path.exists(os.path.dirname(os.path.realpath(__file__))+'\\csvfiles'):
+    os.makedirs(os.path.dirname(os.path.realpath(__file__))+'\\csvfiles')
 
+for row in students:
+    start = '27/04/2015 00:00:00'
+    start_date = datetime.datetime.strptime(start,'%d/%m/%Y %H:%M:%S')
+    end_date = datetime.datetime.now()
+    while(start_date<end_date):
+        date_str = datetime.datetime.strftime(start_date,'%d/%m/%Y %H:%M:%S')
+        if not os.path.exists(os.path.dirname(os.path.realpath(__file__))+'\\csvfiles\\'+row):
+            os.makedirs(os.path.dirname(os.path.realpath(__file__))+'\\csvfiles\\'+row)
+        data = urllib.urlencode({"email":row,"date":date_str})
+        resp = urllib.urlopen(url,data)
+        try:
+            result = json.loads(resp.read())['data']
+            with open(os.path.dirname(os.path.realpath(__file__))+'\\csvfiles\\'+row+"\\"+date_str[:10].replace('/','')+".csv",'wb') as csvfile:
+                fieldnames = ['TimeStamp','Url','type','data']
+                writer = csv.DictWriter(csvfile,fieldnames = fieldnames)
+                writer.writeheader()
+                for record in result:
+                    writer.writerow({'TimeStamp':record['timeStamp'].encode('utf-8'),'Url':record['url'].encode('utf-8'),'type':record['eventype'].encode('utf-8'),'data':record['data'].encode('utf-8')})
+        except Exception,e:
+            print(str(e))
+        start_date = start_date+datetime.timedelta(days=1)
+    print(row+": success")

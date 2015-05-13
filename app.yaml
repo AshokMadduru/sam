@@ -12,6 +12,9 @@ handlers:
 - url: /bootstrap
   static_dir: bootstrap
 
+- url: /csv/.*
+  script: CSV.app
+
 - url: /calc.*
   script: calculations.app
 

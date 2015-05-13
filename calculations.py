@@ -1,3 +1,8 @@
+## Contains Classes: Math
+## Math: calculates the mean, mode and median of all students
+##      for one day
+
+
 import webapp2
 import jinja2
 import os
@@ -54,25 +59,25 @@ class Maths(webapp2.RequestHandler):
                 elif count == len(data)-1:
                     time = row.uRl.eventdata.eventTime
                     end = datetime.datetime.strptime(time,"%d/%m/%Y %H:%M:%S")
-                    diff = start-end
-                    if diff in mode:
-                        mode[str(diff)] = mode[str(diff)]+diff.seconds
+                    diff = (start-end).seconds
+                    if str(diff) in mode:
+                        mode[str(diff)] = mode[str(diff)]+1
                     else:
-                        mode[str(diff)] = diff.seconds
+                        mode[str(diff)] = 1
                     duration = duration+diff
-                    diffs.append(str(diff.seconds))
+                    diffs.append(str(diff))
                     tot_data.append([url,time,st,diff])
                 else:
                     if url != row.uRl.url:
                         time = row.uRl.eventdata.eventTime
                         end = datetime.datetime.strptime(time,"%d/%m/%Y %H:%M:%S")
-                        diff = start-end
-                        if diff in mode:
-                            mode[str(diff)] = mode[str(diff)]+diff.seconds
+                        diff = (start-end).seconds
+                        if str(diff) in mode:
+                            mode[str(diff)] = mode[str(diff)]+1
                         else:
-                            mode[str(diff)] = diff.seconds
+                            mode[str(diff)] = 1
                         duration = duration+diff
-                        diffs.append(str(diff.seconds))
+                        diffs.append(str(diff))
                         tot_data.append([url,time,st,diff])
                         start = end
                         st = time
@@ -83,7 +88,7 @@ class Maths(webapp2.RequestHandler):
             if len(data) == 0:
                 mean = 0
             else:
-                mean = duration/len(data)
+                mean = duration/len(tot_data)
             # median
             global median
             sorted_diffs = sorted(diffs)
@@ -94,19 +99,19 @@ class Maths(webapp2.RequestHandler):
             # mode
             global Mode
             if len(data) == 0:
-                Mode = 0
+                Mode = "0"
             else:
-                Mode = start-start
+                temp = (curr_time-curr_time).seconds
                 for record in mode:
-                    if mode[record]>Mode:
-                        Mode = mode[record]
+                    if mode[record]>temp:
+                        Mode = record
             # send data to html as template values
             #template_values = {'mean':mean, 'median':median,'mode':Mode}
             # render template
             #template = JINJA_ENVIRONMENT.get_template('calculations.html')
             #self.response.write(template.render(template_values))
             values = [mean,median,Mode]
-            self.response.write(json.dumps([str(mean),str(median),str(Mode)]))
+            self.response.write(json.dumps({'values':[str(mean),str(median),str(Mode)]}))
         except Exception,e:
             self.response.write('Failed: '+str(e))
 ############################################################

@@ -1,3 +1,9 @@
+"""
+Cron.py is intended for Calculation of students duration for all days Manually
+and daily wise at the end of day by cron job.
+Manual class is intend for calculating duration manually for all days starting
+from 27-Mar-2015.
+"""
 import webapp2
 
 from google.appengine.ext import ndb
@@ -54,6 +60,7 @@ class Manual(webapp2.RequestHandler):
                 global url
                 global duration
                 duration = 0
+                global last
                 for record in data:
                     if count == 0:
                         start = record[1]
@@ -70,7 +77,11 @@ class Manual(webapp2.RequestHandler):
                             duration = duration+(et-st)
                     else:
                         if(url != record[0]):
-                            duration = duration+(et-st)
+                            time = datetime.datetime.strptime(record[1],'%d/%m/%Y %H:%M:%S')
+                            if(time-st).seconds>240:
+                                duration = duration+(et-st)
+                            else:
+                                duration = duration+(time-st)
                             st = datetime.datetime.strptime(record[1],'%d/%m/%Y %H:%M:%S')
                             et = st
                             url = record[0]

@@ -1,3 +1,7 @@
+"""
+Main.py file handles 
+"""
+
 import sys
 import cgi
 import urllib
