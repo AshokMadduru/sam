@@ -16,7 +16,6 @@ import datetime
 import jinja2
 import os
 import json
-import datetime
 
 from Intermediate import Student,student_key,Url,eventData
 from Intermediate import Students,students_key,URL

@@ -46,6 +46,39 @@ class StoreMeta(webapp2.RequestHandler):
         else:
             self.response.write("failed")
 
+# key for student-mentor darabase
+def student_assignedData_key(name = 'assigned'):
+    return ndb.Key('StudentDetails',name)
+## Model for Student Details
+class StudentDetails(ndb.Model):
+    student_name = ndb.StringProperty(indexed = True)
+    student_email = ndb.StringProperty(indexed = True)
+    student_id = ndb.StringProperty(indexed = True)
+    mentor_name = ndb.StringProperty(indexed = True)
+
+class InsertStudentDetails(webapp2.RequestHandler):
+    def post(self):
+        name = self.request.get('name')
+        mail = self.request.get('mail')
+        stuId = self.request.get('stuid')
+        mentor = self.request.get('mentor')
+
+        data = StudentDetails(student_name = name,student_email = mail,
+                             student_id = stuId,mentor_name = mentor )
+        try:
+            data.put()
+            self.response.write('success')
+        except Exception,e:
+            self.response.write(str(e))
+
+##class GetStudentDetails(webapp2.RequestHandler):
+##    def getstudents(self):
+##        stu = self.request.get('name','assigned')
+##        qry = StudentDetails.query(ancestor = student_assignedData_key(stu))
+##        data = qry.fetch()
+##        return data
+            
 app = webapp2.WSGIApplication([
     ('/meta/insert',StoreMeta),
+    ('/meta/insertstu',InsertStudentDetails),
     ],debug = True)

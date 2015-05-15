@@ -15,6 +15,12 @@ handlers:
 - url: /csv/.*
   script: CSV.app
 
+- url: /details/.*
+  script: Detail.app
+
+- url: /mentor/.*
+  script: Mentor.app
+
 - url: /calc.*
   script: calculations.app
 
