@@ -275,8 +275,7 @@ class DashBoard(webapp2.RequestHandler):
                         data_dict = {} 
                         for row in duration:
                             data_dict[row.date] = row.duration
-                        html = html + "<tr><td>"+str(count)+"""</td><td><a href = http://student-monitor.appspot.com/student/getEmail?
-                                    email="""+row.email+" target = _blank>"+userName+"</a></td>"
+                        html = html + "<tr><td>"+str(count)+"""</td><td><a href = http://student-monitor.appspot.com/details/studentdetails?email="""+row.email+" target = _blank>"+userName+"</a></td>"
                         start = datetime.datetime.strptime('27-04-2015','%d-%m-%Y').date()
                         while(start<today):
                             if datetime.datetime.strftime(start,'%d/%m/%Y') in data_dict:

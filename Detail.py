@@ -24,7 +24,7 @@ class DetailsHome(webapp2.RequestHandler):
         self.response.write(template.render())
 
 class StudentDetails(webapp2.RequestHandler):
-    def post(self):
+    def get(self):
         mail = self.request.get("email")
         if mail is not None and '@' in mail:
             self.result_student_data=[]
