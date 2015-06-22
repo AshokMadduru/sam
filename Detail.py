@@ -301,4 +301,5 @@ class TaskWiseData(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/details/',DetailsHome),
     ('/details/studentdetails',StudentDetails),
+    ('/details/taskwise',TaskWiseData),
     ],debug = True)
