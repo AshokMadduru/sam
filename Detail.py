@@ -161,6 +161,50 @@ class StudentDetails(webapp2.RequestHandler):
                                         # data[count][4]," "])
         return 
                           
+    #class TaskWiseData(webapp2.RequestHandler):
+    def post(self):
+        mail = self.request.get("email")
+        if mail is not None and '@' in mail:
+            self.result_student_data=[]
+            self.meta_data = {}
+            self.getMetaData()
+            start_date = datetime.datetime.strptime('27/04/2015 08:30:00',
+                                                    '%d/%m/%Y %H:%M:%S')
+            while(start_date<datetime.datetime.now()):
+                start_time_str = datetime.datetime.strftime(start_date,
+                                                            '%d/%m/%Y %H:%M:%S')
+                end_time = start_date+datetime.timedelta(hours=12)
+                end_time_str = datetime.datetime.strftime(end_time,
+                                                          '%d/%m/%Y %H:%M:%S')
+                self.student_data = []
+                self.getFirstTableData(mail,start_time_str,end_time_str)
+                self.getSecondTableData(mail,start_time_str,end_time_str)
+                result = []
+                for record in self.student_data:
+                    if 'udacity' in record[1]:
+                        if record[1] in self.meta_data:
+                            urlData = self.meta_data[record[1]]
+                            chapter = urlData[0]
+                            moduleNo = urlData[1]
+                            title = urlData[2]
+                            moduleType = urlData[3]
+                            result.append([record[0],chapter,moduleNo,
+                                           title,moduleType])
+                        else:
+                            result.append([record[0],'Udacity'," ",
+                                           " ","Discussions"])
+                    else:
+                        domainName = self.getDomain(record[1])
+                        if domainName != 'ignore':
+                            result.append([record[0],domainName," "," "
+                                             ," "])
+                self.getDuration(result)
+                start_date = end_time+datetime.timedelta(hours=12)
+            template_values = {'name':mail,'data':self.result_student_data}
+            template = JINJA_ENVIRONMENT.get_template('studentdetails.html')
+            self.response.write(self.result_student_data)
+        else:
+            self.response.write('check your mail')
 app = webapp2.WSGIApplication([
     ('/details/',DetailsHome),
     ('/details/studentdetails',StudentDetails),
