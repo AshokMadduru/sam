@@ -160,8 +160,8 @@ class StudentDetails(webapp2.RequestHandler):
                                        #  data[count][2],data[count][3],
                                         # data[count][4]," "])
         return 
-                          
-    #class TaskWiseData(webapp2.RequestHandler):
+
+class TaskWiseData(webapp2.RequestHandler):
     def post(self):
         mail = self.request.get("email")
         if mail is not None and '@' in mail:
@@ -205,6 +205,99 @@ class StudentDetails(webapp2.RequestHandler):
             self.response.write(self.result_student_data)
         else:
             self.response.write('check your mail')
+
+    def getFirstTableData(self,mail,time_stamp1,time_stamp2):
+        try:
+            # Get data from Chrome Table
+            chro = self.request.get('browser_name','chrome_data')
+            qry = Chrome.query(ancestor = browser_key(chro))
+            qry1 = qry.filter(Chrome.email == mail)
+            qry2 = qry1.filter(Chrome.timeStamp >=time_stamp1)
+            qry3 = qry2.filter(Chrome.timeStamp <time_stamp2)
+            data = qry3.fetch()
+            result = []
+            last = " "
+            for record in data:
+                if record.timeStamp != last:
+                    self.student_data.append([record.timeStamp,
+                                              record.urlLink])
+                    last = record.timeStamp
+            return 
+        except Exception,e:
+            self.response.write('unable to get data'+str(e))
+
+    def getSecondTableData(self,mail,time_stamp1,time_stamp2):
+        try:
+            # get data from Student table
+            stu = self.request.get('student','student')
+            qry = Student.query(ancestor = student_key(stu))
+            qry1 = qry.filter(Student.email == mail)
+            qry2 = qry1.filter(Student.uRl.eventdata.eventTime >=time_stamp1)
+            qry3 = qry2.filter(Student.uRl.eventdata.eventTime <time_stamp2)
+            data = qry3.fetch()
+            result = []
+            last = " "
+            for row in data:
+                if row.uRl.eventdata.eventTime !=last:
+                    self.student_data.append([row.uRl.eventdata.eventTime,
+                                   row.uRl.url])
+                    last = row.uRl.eventdata.eventTime
+            return 
+        except Exception,e:
+            self.response.write('unable to get data '+str(e))
+
+    def getMetaData(self):
+        try:
+            qry = "SELECT * FROM Meta ORDER BY chapter,moduleNo"
+            data_query = ndb.gql(qry)
+            data = data_query.fetch()
+            for record in data:
+                self.meta_data[record.url] = [record.chapter,record.moduleNo,
+                                              record.title,record.moduleType,
+                                              record.qtype,record.duration]
+            return 
+        except Exception,e:
+            self.response.write('unable to get data '+str(e))
+
+    def getDomain(self,url):
+        if url is not None or url is not "" or url is not " ":
+            if '//' in url:
+                first_index = url.index('//')
+                if 'www' in url[first_index+2:]:
+                    pos_of_second_dot = url[url.index('www')+4:].index('.')
+                    return url[url.index('www')+4:
+                               url.index('www')+4+pos_of_second_dot]
+                else:
+                    if '.' in url[first_index+2:]:
+                        pos_of_dot = url[first_index+2:].index('.')
+                        return url[first_index+2:first_index+2+pos_of_dot]
+                    else:
+                        return url[first_index+2:]
+            else:
+                if '.' in url:
+                    return url[:url.index('.')]
+                else:
+                    return url
+        else:
+            return 'ignore'
+
+    def getDuration(self,data):
+        count = 0
+        result = []
+        while(count<len(data)-1):
+            first = datetime.datetime.strptime(data[count][0],
+                                               '%d/%m/%Y %H:%M:%S')
+            second = datetime.datetime.strptime(data[count+1][0],
+                                                '%d/%m/%Y %H:%M:%S')
+            duration = second-first
+            self.result_student_data.append([data[count][0],data[count][1],
+                                        data[count][2],data[count][3],
+                                        data[count][4],str(duration)])
+            count = count+1
+        #self.result_student_data.append([data[count][0],data[count][1],
+                                       #  data[count][2],data[count][3],
+                                        # data[count][4]," "])
+        return                           
 app = webapp2.WSGIApplication([
     ('/details/',DetailsHome),
     ('/details/studentdetails',StudentDetails),
