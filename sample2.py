@@ -49,6 +49,7 @@ with open('data1.csv','wb') as csvfile:
     fieldnames = ["StudentMail"]
     data = urllib.urlencode({"email":'akella.keerthi@gmail.com'})
     resp = urllib.urlopen(url,data)
+    #print(resp.read())
     result = json.loads(resp.read())
     dataa=result["data"]
     count=0
@@ -68,6 +69,7 @@ with open('data1.csv','wb') as csvfile:
         d={"StudentMail":mail}
         for row in dataa:
             if len(row['duration'])>2:
+                print(row['duration'])
                 duration = str(row['duration']).split(":")
                 duration_seconds=((int(duration[0]))*3600)+((int(duration[1]))*60)+int(duration[2])
                 d[row['meta']]=duration_seconds/600
@@ -81,6 +83,7 @@ with open('data1.csv','wb') as csvfile:
                 d[row['meta']+" "+"Mouse"]=0
         writer.writerow(d)
         print(mail)
-        if count>3:
-            break;
         count=count+1
+        if count>4:
+            break;
+        

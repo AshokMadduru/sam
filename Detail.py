@@ -163,50 +163,31 @@ class TaskWiseData(webapp2.RequestHandler):
         mail = self.request.get("email")
         if mail is not None and '@' in mail:
             final_result = []
-            self.result_student_data={}
             self.meta_data = {}
             self.getMetaData()
-            start_date = datetime.datetime.strptime('27/04/2015 08:30:00',
-                                                    '%d/%m/%Y %H:%M:%S')
+            self.duration={}
+            self.events={}
+            start_date = datetime.datetime.strptime('27/04/2015 08:30:00','%d/%m/%Y %H:%M:%S')
             while(start_date<datetime.datetime.now()):
-                start_time_str = datetime.datetime.strftime(start_date,
-                                                            '%d/%m/%Y %H:%M:%S')
+                start_time_str = datetime.datetime.strftime(start_date,'%d/%m/%Y %H:%M:%S')
                 end_time = start_date+datetime.timedelta(hours=12)
-                end_time_str = datetime.datetime.strftime(end_time,
-                                                          '%d/%m/%Y %H:%M:%S')
+                end_time_str = datetime.datetime.strftime(end_time,'%d/%m/%Y %H:%M:%S')
                 self.student_data = []
                 self.getFirstTableData(mail,start_time_str,end_time_str)
                 self.getSecondTableData(mail,start_time_str,end_time_str)
-                result = []
-                for record in self.student_data:
-                    str1= ""
-                    if 'udacity' in record[1]:
-                        if record[1] in self.meta_data:
-                            urlData = self.meta_data[record[1]]
-                            chapter = urlData[0]
-                            moduleNo = urlData[1]
-                            title = urlData[2]
-                            moduleType = urlData[3]
-                            #result.append([record[0],str(chapter)+" "+str(moduleNo)+" "+title+" "+moduleType])
-                            result.append([record[0],record[1],record[2]])
-                        else:
-                            result.append([record[0],record[1],record[2]])#"Udacity Discussions"])
-                    else:
-                        domainName = self.getDomain(record[1])
-                        if domainName != 'ignore':
-                            result.append([record[0]," ",record[2]])
-                self.getDuration(result)
+                sorted_data=sorted(self.student_data,key = lambda x:x[0])
+                self.getDuration(self.student_data)
+                self.getEvents(self.student_data)
                 start_date = end_time+datetime.timedelta(hours=12)
-            rec_count=0
             for row in self.meta_data:
                 url_data = self.meta_data[row]
                 dic={}
-                if row in self.result_student_data:
+                if row in self.duration and row in self.events:
                     dic["meta"]=(str(url_data[0])+" "+str(url_data[1]))
-                    dic["Mouse"]=str(self.result_student_data[row]['Mouse'])
-                    dic["Key"]=str(self.result_student_data[row]['Key'])
-                    dic["Input"]=str(self.result_student_data[row]['Input'])
-                    dic["duration"]=(str(self.result_student_data[row]['duration']))
+                    dic["Mouse"]=str(self.events[row]['Mouse'])
+                    dic["Key"]=str(self.events[row]['Key'])
+                    dic["Input"]=str(self.events[row]['Input'])
+                    dic["duration"]=(str(self.duration[row]))
                     final_result.append(dic)
                 else:
                     dic["meta"]=(str(url_data[0])+" "+str(url_data[1]))
@@ -215,7 +196,6 @@ class TaskWiseData(webapp2.RequestHandler):
                     dic["Key"]="0"
                     dic["Input"]="0"
                     final_result.append(dic)
-                rec_count=rec_count+1
             self.response.write(json.dumps({"data":final_result}))
         else:
             self.response.write('check your mail')
@@ -229,14 +209,14 @@ class TaskWiseData(webapp2.RequestHandler):
             qry2 = qry1.filter(Chrome.timeStamp >=time_stamp1)
             qry3 = qry2.filter(Chrome.timeStamp <time_stamp2)
             data = qry3.fetch()
-            result = []
-            last = " "
             for record in data:
-                if record.timeStamp != last:
-                    self.student_data.append([record.timeStamp,
-                                              record.urlLink,
-                                              record.eventType])
-                    last = record.timeStamp
+##                status="true"
+##                for row in self.student_data:
+##                    if row[0] == record.timeStamp:
+##                        status="false"
+##                        break
+##                if status=="true":
+                self.student_data.append([record.timeStamp,record.urlLink,record.eventType])
             return 
         except Exception,e:
             self.response.write('unable to get data'+str(e))
@@ -250,13 +230,14 @@ class TaskWiseData(webapp2.RequestHandler):
             qry2 = qry1.filter(Student.uRl.eventdata.eventTime >=time_stamp1)
             qry3 = qry2.filter(Student.uRl.eventdata.eventTime <time_stamp2)
             data = qry3.fetch()
-            result = []
-            last = " "
             for row in data:
-                if row.uRl.eventdata.eventTime !=last:
-                    self.student_data.append([row.uRl.eventdata.eventTime,
-                                   row.uRl.url,row.uRl.eventdata.eventtype])
-                    last = row.uRl.eventdata.eventTime
+##                status = "true"
+##                for row in self.student_data:
+##                    if row[0]==row.uRl.eventdata.eventTime:
+##                        status="false"
+##                        break
+##                    if status=="true":
+                self.student_data.append([row.uRl.eventdata.eventTime,row.uRl.url,row.uRl.eventdata.eventtype])
             return 
         except Exception,e:
             self.response.write('unable to get data '+str(e))
@@ -298,23 +279,28 @@ class TaskWiseData(webapp2.RequestHandler):
 
     def getDuration(self,data):
         count = 0
-        result = {'Mouse':0,'Input':0,'Key':0}
         while(count<len(data)-1):
             first = datetime.datetime.strptime(data[count][0],
                                                '%d/%m/%Y %H:%M:%S')
             second = datetime.datetime.strptime(data[count+1][0],
                                                 '%d/%m/%Y %H:%M:%S')
             duration = second-first
-            if data[count][1] in self.result_student_data:
-                self.result_student_data[data[count][1]]['duration']=self.result_student_data[data[count][1]]['duration']+duration
-                if data[count][2] in self.result_student_data[data[count][1]]:
-                    self.result_student_data[data[count][1]][data[count][2]]=self.result_student_data[data[count][1]][data[count][2]]+1
+            if data[count][1] in self.duration:
+                self.duration[data[count][1]]=self.duration[data[count][1]]+duration
             else:
-                result['duration']=duration
-                if data[count][2] in result:
-                    result[data[count][2]]=result[data[count][2]]+1
-                self.result_student_data[data[count][1]]=result
+                self.duration[data[count][1]]=duration
             count = count+1
+        return
+    def getEvents(self,data):
+        result = {'Mouse':int("0"),'Input':int("0"),'Key':int("0")}
+        for row in data:
+            if row[1] in self.events:
+                if row[2] in result:
+                    self.events[row[1]][row[2]]=self.events[row[1]][row[2]]+1
+            else:
+                if row[2] in result:
+                    result[row[2]]=result[row[2]]+1
+                    self.events[row[1]]=result
         return
     
 app = webapp2.WSGIApplication([
