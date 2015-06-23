@@ -165,7 +165,8 @@ class TaskWiseData(webapp2.RequestHandler):
     def post(self):
         mail = self.request.get("email")
         if mail is not None and '@' in mail:
-            self.result_student_data=[]
+            final_result = []
+            self.result_student_data={}
             self.meta_data = {}
             self.getMetaData()
             start_date = datetime.datetime.strptime('27/04/2015 08:30:00',
@@ -181,6 +182,7 @@ class TaskWiseData(webapp2.RequestHandler):
                 self.getSecondTableData(mail,start_time_str,end_time_str)
                 result = []
                 for record in self.student_data:
+                    str1= ""
                     if 'udacity' in record[1]:
                         if record[1] in self.meta_data:
                             urlData = self.meta_data[record[1]]
@@ -188,21 +190,25 @@ class TaskWiseData(webapp2.RequestHandler):
                             moduleNo = urlData[1]
                             title = urlData[2]
                             moduleType = urlData[3]
-                            result.append([record[0],chapter,moduleNo,
-                                           title,moduleType])
+                            #result.append([record[0],str(chapter)+" "+str(moduleNo)+" "+title+" "+moduleType])
+                            result.append([record[0],record[1]])
                         else:
-                            result.append([record[0],'Udacity'," ",
-                                           " ","Discussions"])
+                            result.append([record[0],record[1]])#"Udacity Discussions"])
                     else:
                         domainName = self.getDomain(record[1])
                         if domainName != 'ignore':
-                            result.append([record[0],domainName," "," "
-                                             ," "])
+                            result.append([record[0]," "])
                 self.getDuration(result)
                 start_date = end_time+datetime.timedelta(hours=12)
-            template_values = {'name':mail,'data':self.result_student_data}
-            template = JINJA_ENVIRONMENT.get_template('studentdetails.html')
-            self.response.write(self.result_student_data)
+            rec_count=0
+            for row in self.meta_data:
+                url_data = self.meta_data[row]
+                if row in self.result_student_data:
+                    final_result.append({"meta":str(url_data[0])+" "+str(url_data[1]),"duration":str(self.result_student_data[row])})
+                else:
+                    final_result.append({"meta":str(url_data[0])+" "+str(url_data[1]),"duration":"0"})
+                rec_count=rec_count+1
+            self.response.write(json.dumps({"data":final_result}))
         else:
             self.response.write('check your mail')
 
@@ -290,9 +296,10 @@ class TaskWiseData(webapp2.RequestHandler):
             second = datetime.datetime.strptime(data[count+1][0],
                                                 '%d/%m/%Y %H:%M:%S')
             duration = second-first
-            self.result_student_data.append([data[count][0],data[count][1],
-                                        data[count][2],data[count][3],
-                                        data[count][4],str(duration)])
+            if data[count][1] in self.result_student_data:
+                self.result_student_data[data[count][1]]=self.result_student_data[data[count][1]]+duration
+            else:
+                self.result_student_data[data[count][1]]=duration
             count = count+1
         #self.result_student_data.append([data[count][0],data[count][1],
                                        #  data[count][2],data[count][3],
