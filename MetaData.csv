@@ -1,0 +1,666 @@
+4,1,Introduction,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48704270,1:56,Video,
+4,2,Time Flies,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48703290,1:57,Video,
+4,3,Brute Force,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48299880,2:48,Video,
+4,4,Fibonacci,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48724376,1:51,Video,
+4,5,Recursive Definition,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48557329/m-48703292,0:11,Quiz,CheckBox
+4,6,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48557329/m-48733173,,Question,
+4,7,Recursive Definition Solution,`https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48557329/m-48686624,1:36,Solution,
+4,8,Memoization,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48605797,2:57,Video,
+4,9,Memofibo,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48449995/m-48299881,0:24,Quiz,Programming
+4,10,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48449995/m-48709247,,Question,
+4,11,Memofibo Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48449995/m-48439408,1:23,Solution,
+4,12,Memoization For Parsing,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48240978,3:03,Video,
+4,13,Parsing State,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48452920,1:31,Video,
+4,14,Possible States,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48636427/m-48240980,0:33,Quiz,CheckBox
+4,15,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48636427/m-48737098,,Question,
+4,16,Possible States Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48636427/m-48748040,2:22,Solution,
+4,17,Charting Parse States,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48452921,2:43,Video,
+4,18,Possible Tokens,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48430518/m-48744049,0:18,Quiz,CheckBox
+4,19,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48430518/m-48299883,,Question,
+4,20,Possible Tokens Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48430518/m-48480530,2:36,Solution,
+4,21,Malformed Input,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48449996/m-48480531,1:00,Quiz,CheckBox
+4,22,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48449996/m-48299893,,Question,
+4,23,Malformed Input Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48449996/m-48311809,2:13,Solution,
+4,24,Magical Power,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48480533,5:16,Video,
+4,25,Hidden Past,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48425449/m-48299888,1:13,Quiz,TextBox
+4,26,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48425449/m-48728265,,Question,
+4,27,Hidden Past Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48425449/m-48480529,2:59,Solution,
+4,28,Building The Chart,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48299889,1:14,Video,
+4,29,Closure,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48748044,4:19,Video,
+4,30,Computing The Closure,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48613431/m-48439413,0:47,Quiz,CheckBox
+4,31,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48613431/m-48403834,,Question,
+4,32,Computing The Closure Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48613431/m-48240977,2:15,Solution,
+4,33,Consuming The Input,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48480535,2:13,Video,
+4,34,Shifting,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48720280/m-48709255,0:48,Quiz,CheckBox
+4,35,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48720280/m-48709257,,Question,
+4,36,Shifting Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48720280/m-48439414,1:38,Solution,
+4,37,Reduction,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48240984,1:53,Video,
+4,38,Magic Reductions,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48748043,1:48,Video,
+4,39,Reduction Walkthrough,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48299894,6:54,Video,
+4,40,Parsing Chart,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48338598/m-48480534,0:52,Quiz,CheckBox
+4,41,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48338598/m-48730162,,Question,
+4,42,Parsing Chart Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48338598/m-48686627,2:32,Solution,
+4,43,Addtochart,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48310786/m-48704277,2:46,Quiz,Programming
+4,44,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48310786/m-48369825,,Question,
+4,45,Addtochart Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48310786/m-48744056,0:57,Solution,
+4,46,Revenge Of List Comprehensions,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48439416,3:03,Video,
+4,47,Writing Closure,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48310787/m-48311814,1:57,Quiz,Programming
+4,48,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48310787/m-48733176,,Question,
+4,49,Writing Closure Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48310787/m-48723462,2:40,Solution,
+4,50,Abstract Thinking,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48709245,0:45,Video,
+4,51,Writing Shift,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48445294/m-48646759,1:21,Quiz,Programming
+4,52,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48445294/m-48716268,,Question,
+4,53,Writing Shift Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48445294/m-48702384,1:26,Solution,
+4,54,Writing Reductions,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48557330/m-48299890,1:16,Quiz,Programming
+4,55,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48557330/m-48480537,,Question,
+4,56,Writing Reductions Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48557330/m-48439406,2:17,Solution,
+4,57,Putting It Together,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48311808,6:11,Video,
+4,58,Prisoner Example,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48369822,2:10,Video,
+4,59,Parse Trees,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48733172,4:54,Video,
+4,60,Ramas Journey,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48720281/m-48369823,0:40,Quiz,Programming
+4,61,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48720281/m-48480524,,Question,
+4,62,Ramas Journey Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48720281/m-48726253,0:55,Solution,
+4,63,Parsing Tags,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48329880/m-48480532,0:38,Quiz,TextBox
+4,64,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48329880/m-48748041,,Question,
+4,65,Parsing Tags Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48329880/m-48240979,0:47,Solution,
+4,66,Parsing Javascript,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48369824,2:04,Video,
+4,67,Resolving Ambiguity,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48310788/m-48532684,0:11,Quiz,TextBox
+4,68,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48310788/m-48722231,,Question,
+4,69,Resolving Ambiguity Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48310788/m-48646760,0:25,Solution,
+4,70,Precedence,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48748039,0:48,Video,
+4,71,Higher Precedence,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-47978569/m-48605801,0:21,Quiz,TextBox
+4,72,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-47978569/m-48702389,,Question,
+4,73,Higher Precedence Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-47978569/m-48403830,0:17,Solution,
+4,74,Setting Precedence,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48737097,0:55,Video,
+4,75,Optional Arguments,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48329881/m-48439405,1:43,Quiz,Programming
+4,76,,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48329881/m-48747047,,Question,
+4,77,Optional Arguments Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/e-48329881/m-48727456,1:43,Solution,
+4,78,Interpreting Languages,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48703298,0:26,Video,
+4,79,Memoization At Mozilla,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48747048,2:11,Video,
+4,80,Conclusion,https://www.udacity.com/course/viewer#!/c-cs262/l-48425450/m-48703296,1:27,Video,
+4 Programming Practice-Trees,1,Trees,https://www.udacity.com/course/viewer#!/c-cs262/l-48713818/m-48729280,3:00,Video,
+4 Programming Practice-Trees,2,Drawing Trees,https://www.udacity.com/course/viewer#!/c-cs262/l-48713818/e-48634850/m-48697660,0:51,Quiz,CheckBox
+4 Programming Practice-Trees,3,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713818/e-48634850/m-48739243,,Question,
+4 Programming Practice-Trees,4,Drawing Trees Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713818/e-48634850/m-48698650,2:40,Solution,
+4 Programming Practice-Trees,5,Representing Trees,https://www.udacity.com/course/viewer#!/c-cs262/l-48713818/e-48757003/m-48688883,3:09,Quiz,TextBox
+4 Programming Practice-Trees,6,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713818/e-48757003/m-48692738,,Question,
+4 Programming Practice-Trees,7,Representing Trees Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713818/e-48757003/m-48693751,1:57,Solution,
+4 Programming Practice-Trees,8,Contains,https://www.udacity.com/course/viewer#!/c-cs262/l-48713818/e-48714373/m-48678833,2:24,Quiz,TextBox
+4 Programming Practice-Trees,9,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713818/e-48714373/m-48742130,,Question,
+4 Programming Practice-Trees,10,Contains Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713818/e-48714373/m-48739240,1:29,Solution,
+4 Office Hours,1,Abstract Material,https://www.udacity.com/course/viewer#!/c-cs262/l-48713819/m-48508404,1:57,Video,
+4 Office Hours,2,Creating Languages,https://www.udacity.com/course/viewer#!/c-cs262/l-48713819/m-48292991,4:57,Video,
+4 Office Hours,3,Parsing Tools,https://www.udacity.com/course/viewer#!/c-cs262/l-48713819/m-48689135,6:52,Video,
+4 Office Hours,4,Grab Bag,https://www.udacity.com/course/viewer#!/c-cs262/l-48713819/m-48729284,7:00,Video,
+4 ProblemSet,1,Parsing States,https://www.udacity.com/course/viewer#!/c-cs262/l-48634848/e-48757001/m-48292987,,Quiz,CheckBox
+4 ProblemSet,2,Parsing States Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634848/e-48757001/m-48508400,4:38,Solution,
+4 ProblemSet,3,Bank Heist,https://www.udacity.com/course/viewer#!/c-cs262/l-48634848/e-48734382/m-48508401,,Quiz,Programming
+4 ProblemSet,4,Bank Heist Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634848/e-48734382/m-48381397,6:08,Solution,
+4 ProblemSet,5,Common Ground,https://www.udacity.com/course/viewer#!/c-cs262/l-48634848/e-48652573/m-48381396,,Quiz,Programming
+4 ProblemSet,6,Common Ground Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634848/e-48652573/m-48292989,5:55,Solution,
+4 ProblemSet,7,Parsing Javascript Statements,https://www.udacity.com/course/viewer#!/c-cs262/l-48634848/e-48757002/m-48689134,,Quiz,Programming
+4 ProblemSet,8,Parsing Javascript Statements Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634848/e-48757002/m-48739239,5:04,Solution,
+4 ProblemSet,9,Parsing Javascript Expressions,https://www.udacity.com/course/viewer#!/c-cs262/l-48634848/e-48727609/m-48198850,,Quiz,Programming
+4 ProblemSet,10,Parsing Javascript Expressions Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634848/e-48727609/m-48292988,3:13,Solution,
+4 ProblemSet-Challenge,1,Complexity Of Parsing,https://www.udacity.com/course/viewer#!/c-cs262/l-48634849/e-53055053/m-48721404,,Quiz,Programming
+4 ProblemSet-Challenge,2,Complexity of Parsing Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634849/e-53055053/m-48701466,6:00,Solution,
+5,1,Formal Semantics,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48735122,1:35,Video,
+5,2,Interpreters,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48724403,1:00,Video,
+5,3,Syntax Vs Semantics,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48629219/m-48722232,2:34,Quiz,CheckBox
+5,4,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48629219/m-48299911,,Question,
+5,5,Syntax Vs Semantics Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48629219/m-48716269,1:00,Solution,
+5,6,Bad Programs,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48735123,0:50,Video,
+5,7,Types,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48730163,1:44,Video,
+5,8,Syllepsis,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48720282/m-48632833,2:15,Quiz,TextBox
+5,9,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48720282/m-47978548,,Question,
+5,10,Syllepsis Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48720282/m-48730164,0:47,Solution,
+5,11,Html Interpreter,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48720218,1:19,Video,
+5,12,Graphics,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48673715,3:09,Video,
+5,13,Writing an Interpreter,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-47978570/m-48737111,2:15,Quiz,Programming
+5,14,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-47978570/m-48728278,,Question,
+5,15,Writing an Interpreter Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-47978570/m-48532692,0:45,Solution,
+5,16,Arithmetic,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48735124,2:27,Video,
+5,17,Eval Exp,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48720283/m-48532693,1:22,Quiz,Programming
+5,18,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48720283/m-48403855,,Question,
+5,19,Eval Exp Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48720283/m-48737110,1:24,Solution,
+5,20,Context,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-47978571/m-48734299,2:19,Quiz,TextBox
+5,21,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-47978571/m-48299910,,Question,
+5,22,Context Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-47978571/m-48739191,1:27,Solution,
+5,23,State,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48632834,1:57,Video,
+5,24,Variable Lookup,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48445295/m-48727492,2:15,Quiz,Programming
+5,25,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48445295/m-48696571,,Question,
+5,26,Variable Lookup Solurion,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48445295/m-48702403,0:30,Solution,
+5,27,Control Flow,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48445270,2:59,Video,
+5,28,Evaluating Statements,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48695746/m-48726272,2:21,Quiz,Programming
+5,29,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48695746/m-48733183,,Question,
+5,30,Evaluating Statements Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48695746/m-48403856,1:33,Solution,
+5,31,Creating An Environment,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48449997/m-48329816,1:34,Quiz,CheckBox
+5,32,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48449997/m-48430488,,Question,
+5,33,Creating An Environment Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48449997/m-48329817,1:19,Solution,
+5,34,Scope,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-47978572/m-48425419,1:56,Quiz,TextBox
+5,35,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-47978572/m-48695649,,Question,
+5,36,Scope Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-47978572/m-48722234,1:33,Solution,
+5,37,Identifiers And Storage,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48425451/m-48613415,2:07,Quiz,TextBox
+5,38,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48425451/m-48696570,,Question,
+5,39,Identifiers And Storage Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48425451/m-48430486,1:52,Solution,
+5,40,Environments,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48310789/m-48310760,2:19,Quiz,TextBox
+5,41,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48310789/m-48641611,,Question,
+5,42,Environments Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48310789/m-48609550,0:35,Solution,
+5,43,Lookups,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48723494,0:37,Video,
+5,44,Chained Environments,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48613432/m-48695655,1:43,Quiz,TextBox
+5,45,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48613432/m-48712356,,Question,
+5,46,Chained Environments Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48613432/m-48445273,0:35,Solution,
+5,47,Greetings,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48338599/m-48709274,1:46,Quiz,TextBox
+5,48,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48338599/m-48686670,,Question,
+5,49,Greetings Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48338599/m-48299907,1:15,Solution,
+5,50,Environment Needs,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48720284/m-48311826,2:36,Quiz,TextBox
+5,51,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48720284/m-48745058,,Question,
+5,52,Environment Needs Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48720284/m-48744070,0:41,Solution,
+5,53,Declaring And Calling Functions,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48629220/m-48636411,1:28,Quiz,CheckBox
+5,54,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48629220/m-48720226,,Question,
+5,55,Declaring And Calling Functions Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48629220/m-48338570,1:27,Solution,
+5,56,Catching Errors,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48722233,1:47,Video,
+5,57,Harnessing Exceptions,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48629195,1:04,Video,
+5,58,Frames,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48449998/m-48532694,2:53,Quiz,Programming
+5,59,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48449998/m-48726273,,Question,
+5,60,Frames Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48449998/m-48737113,1:56,Solution,
+5,61,Calling Functions,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48271932,1:20,Video,
+5,62,Function Definitions,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48609571/m-47978547,0:45,Quiz,TextBox
+5,63,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48609571/m-48744068,,Question,
+5,64,Function Definitions Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48609571/m-48480553,0:27,Solution,
+5,65,Double Edged Sword,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48734298,2:33,Video,
+5,66,Natural Language Power,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48439426,1:20,Video,
+5,67,Comparing Languages,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48310790/m-48673718,1:16,Quiz,CheckBox
+5,68,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48310790/m-47978546,,Question,
+5,69,Comparing Languages Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48310790/m-48240995,1:21,Solution,
+5,70,Infinite Loop,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48695747/m-48439427,1:56,Quiz,CheckBox
+5,71,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48695747/m-48702402,,Question,
+5,72,Infinite Loop Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48695747/m-48686669,1:43,Solution,
+5,73,Tsif,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48613433/m-48691604,0:36,Quiz,CheckBox
+5,74,,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48613433/m-48720225,,Question,
+5,75,Tsif Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/e-48613433/m-48445271,2:59,Solution,
+5,76,Conclusion,https://www.udacity.com/course/viewer#!/c-cs262/l-48609572/m-48704293,1;55,Video,
+5 Office Hours,1,Readability Survey,https://www.udacity.com/course/viewer#!/c-cs262/l-48701507/m-48723519,2:48,Video,
+5 Office Hours,2,Domain Specific Languages,https://www.udacity.com/course/viewer#!/c-cs262/l-48701507/m-48721414,6:40,Video,
+5 Office Hours,3,Exceptional Control Flow,https://www.udacity.com/course/viewer#!/c-cs262/l-48701507/m-48692751,4:25,Video,
+5 Office Hours,4,Extending The Browser,https://www.udacity.com/course/viewer#!/c-cs262/l-48701507/m-48695699,6:22,Video,
+5 Office Hours,5,Global Variables,https://www.udacity.com/course/viewer#!/c-cs262/l-48701507/m-48723520,4:05,Video,
+5 ProblemSet,1,Introducing Your Web Browser,https://www.udacity.com/course/viewer#!/c-cs262/l-48734383/e-48746094/m-48721406,,Quiz,Programming
+5 ProblemSet,2,Introducing Your Browser Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48734383/e-48746094/m-48011965,2:53,Solution,
+5 ProblemSet,3,I Could Wile Away The Hours,https://www.udacity.com/course/viewer#!/c-cs262/l-48734383/e-48719353/m-48693753,,Quiz,Programming
+5 ProblemSet,4,I Could Wile Away The Hours Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48734383/e-48719353/m-48011966,2:30,Solution,
+5 ProblemSet,5,Interpreter Summary,https://www.udacity.com/course/viewer#!/c-cs262/l-48734383/e-48635735/m-48739244,,Quiz,CheckBox
+5 ProblemSet,6,Interpreter Summary Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48734383/e-48635735/m-48292990,3:50,Solution,
+5 ProblemSet,7,Scope and Environments,https://www.udacity.com/course/viewer#!/c-cs262/l-48734383/e-48634851/m-48230524,,Quiz,TextBox
+5 ProblemSet,8,Scope and Environments Solutions,https://www.udacity.com/course/viewer#!/c-cs262/l-48734383/e-48634851/m-48737131,2:15,Solution,
+5 ProblemSet,9,Higher Order Functions,https://www.udacity.com/course/viewer#!/c-cs262/l-48734383/e-48624738/m-48230525,,Quiz,Programming
+5 ProblemSet,10,Higher Order Functions Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48734383/e-48624738/m-48420240,3:47,Solution,
+5 Make the world a better Place,1,You Can Participate,https://www.udacity.com/course/viewer#!/c-cs262/l-48686742/m-48230526,6:06,Video,
+6,1,Web Browser Architecture,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48742122,2:18,Video,
+6,2,Web Browser Process,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48299969/m-48680741,0:30,Quiz,CheckBox
+6,3,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48299969/m-48729273,,Question,
+6,4,Web Browser Process Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48299969/m-48747064,1:15,Solution,
+6,5,Fitting Them Together,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48695676,4:49,Video,
+6,6,Token Value,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48686736/m-48723505,0:28,Quiz,RadioButton
+6,7,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48686736/m-48695680,,Question,
+6,8,Token Value Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48686736/m-48680742,0:52,Solution,
+6,9,Extending Our Html Grammar,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48749061,2:21,Video,
+6,10,Calling The Interpreter,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48724465/m-48739219,2:36,Quiz,TextBox
+6,11,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48724465/m-48329828,,Question,
+6,12,Calling The Interpreter Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48724465/m-48721396,1:05,Solution,
+6,13,Evil Problem,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48726279,1:14,Video,
+6,14,Javascript Output,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48723571/m-48678824,1:42,Quiz,CheckBox
+6,15,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48723571/m-48666041,,Question,
+6,16,Javascript Output Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48723571/m-48723506,1:57,Solution,
+6,17,Updating Output,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48755019/m-48381393,2:16,Quiz,TextBox
+6,18,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48755019/m-48011963,,Question,
+6,19,Updating Output Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48755019/m-48420234,0:30,Solution,
+6,20,Contrived Example,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48696574,1:49,Video,
+6,21,Counting Frames,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48311848/m-48538402,0:37,Quiz,TextBox
+6,22,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48311848/m-48666042,,Question,
+6,23,Counting Frames Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48311848/m-48666043,0:43,Solution,
+6,24,Debugging,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48686738/m-48737115,2:45,Quiz,CheckBox
+6,25,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48686738/m-48717352,,Question,
+6,26,Debugging Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48686738/m-48698644,1:14,Solution,
+6,27,Testing,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48680746,1:52,Video,
+6,28,Testing Knowledge,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48724466/m-48678828,0:23,Quiz,CheckBox
+6,29,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48724466/m-48737117,,Question,
+6,30,Testing Knowledge Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48724466/m-48749065,0:56,Solution,
+6,31,Code Coverage,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48723572/m-48696575,1:20,Quiz,CheckBox
+6,32,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48723572/m-48648764,,Question,
+6,33,Code Coverage Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48723572/m-48721397,2:16,Solution,
+6,34,Testing In Depth,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48747067,4:20,Video,
+6,35,Fault Localization,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48452950/m-48688875,0:27,Quiz,CheckBox
+6,36,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48452950/m-48198847,,Question,
+6,37,Fault Localization Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48452950/m-48697653,1:14,Solution,
+6,38,Testing At Mozilla,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48688877,3:56,Video,
+6,39,Anonymous Functions,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48299970/m-48697656,3:00,Quiz,
+6,40,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48299970/m-48299920,,Question,TextBox
+6,41,Anonymous Functions Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48299970/m-48702408,1:08,Solution,
+6,42,Mistakes,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48755020/m-48688878,0:58,Quiz,CheckBox
+6,43,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48755020/m-48403863,,Question,
+6,44,Mistakes Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48755020/m-48723509,1:57,Solution,
+6,45,Hola,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48299971/m-48729272,1:29,Quiz,RadioButton
+6,46,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48299971/m-48508399,,Question,
+6,47,Hola Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48299971/m-48381390,1:16,Solution,
+6,48,Debugging In The Real World,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48733188,1:45,Video,
+6,49,Optimization,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48403861,3:41,Video,
+6,50,Platos Republic,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48703330/m-48587880,0:34,Quiz,CheckBox
+6,51,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48703330/m-48747065,,Question,
+6,52,Platos Republic Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48703330/m-48678830,1:43,Solution,
+6,53,Implementing Optimizations,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48724467/m-48692735,1:08,Quiz,TextBox
+6,54,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48724467/m-48742124,,Question,
+6,55,Implementing Optimizations Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48724467/m-48381391,2:05,Solution,
+6,56,Optimization At Mozilla,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48420229,5:24,Video,
+6,57,Optimization Timing,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48381392,3:24,Video,
+6,58,Optimization Phase,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48480581/m-48296533,0:12,Quiz,Programming
+6,59,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48480581/m-48011961,,Question,
+6,60,Optimization Phase Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48480581/m-48743077,0:43,Solution,
+6,61,Optimizer Check,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48452951/m-48727497,0:17,Quiz,CheckBox
+6,62,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48452951/m-48698643,,Question,
+6,63,Optimizer Check Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48452951/m-48369850,1:02,Solution,
+6,64,Rebuilding The Parse Tree,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48532701,0:46,Video,
+6,65,Fix It Up,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48299972/m-48587881,0:11,Quiz,Programming
+6,66,,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48299972/m-48329829,,Question,
+6,67,Fix It Up Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/e-48299972/m-48729275,0:34,Solution,
+6,68,Creativity In Optimization,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48696572,0:33,Video,
+6,69,Bending The Rules,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48403859,1:39,Video,
+6,70,Wrap Up,https://www.udacity.com/course/viewer#!/c-cs262/l-48755021/m-48680747,1:23,Video,
+6 ProblemSet,1,"Interpreting, Testing, and Debugging",https://www.udacity.com/course/viewer#!/c-cs262/l-48693795/e-48678871/m-48739264,,Quiz,CheckBox
+6 ProblemSet,2,"Interpreting, Testing, and Debugging Solution",https://www.udacity.com/course/viewer#!/c-cs262/l-48693795/e-48678871/m-48722259,5:10,Solution,
+6 ProblemSet,3,JavaScripts Big Bang,https://www.udacity.com/course/viewer#!/c-cs262/l-48693795/e-48680795/m-48724437,,Quiz,Programming
+6 ProblemSet,4,JavaScripts Big Bang Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48693795/e-48680795/m-48712386,2:21,Solution,
+6 ProblemSet,5,Debugging Environments,https://www.udacity.com/course/viewer#!/c-cs262/l-48693795/e-48680796/m-48712385,,Quiz,Programming
+6 ProblemSet,6,Debugging Environments Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48693795/e-48680796/m-48641645,2:02,Solution,
+6 ProblemSet,7,Bending Numbers,https://www.udacity.com/course/viewer#!/c-cs262/l-48693795/e-48680797/m-48724438,,Quiz,Programming
+6 ProblemSet,8,Bending Numbers Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48693795/e-48680797/m-48724439,4:46,Solution,
+6 ProblemSet,9,The Living and the Dead,https://www.udacity.com/course/viewer#!/c-cs262/l-48693795/e-48701506/m-48739262,,Quiz,Programming
+6 ProblemSet,10,The Living and the Dead Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48693795/e-48701506/m-48745082,3:33,Solution,
+6 ProblemSet,11,A Web Browser for HTML and JavaScript,https://www.udacity.com/course/viewer#!/c-cs262/l-48693795/e-48680798/m-48734341,,Quiz,Programming
+6 ProblemSet,12,A Web Browser for HTML and JavaScript Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48693795/e-48680798/m-48697668,0:58,Solution,
+6 ProblemSet-Challenge,1,Automatic Debugging,https://www.udacity.com/course/viewer#!/c-cs262/l-48723577/e-48697710/m-48739268,,Quiz,Programming
+6 ProblemSet-Challenge,2,Automatic Debugging Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48723577/e-48697710/m-48739269,4:53,Solution,
+7,1,Final Unit,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/m-48688884,7:15,Video,
+7,2,Regexps,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48713820/m-48749068,0:37,Quiz,CheckBox
+7,3,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48713820/m-48391973,,Question,
+7,4,Regexps Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48713820/m-48742135,1:19,Solution,
+7,5,A Quick Brown Fox,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48682663/m-48729289,0:23,Quiz,TextBox
+7,6,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48682663/m-48697665,,Question,
+7,7,A Quick Brown Fox Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48682663/m-48698652,0:46,Solution,
+7,8,Fsm To Re,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48714374/m-48739259,0:23,Quiz,RadioButton
+7,9,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48714374/m-48686690,,Question,
+7,10,Fsm To Re Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48714374/m-48678836,1:36,Solution,
+7,11,RE to FSM,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48719355/m-48712383,0:11,Quiz,CheckBox
+7,12,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48719355/m-48730188,,Question,
+7,13,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48719355/m-48724436,1:02,Solution,
+7,14,Regular Expressions,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48713821/m-48721410,0:43,Quiz,CheckBox
+7,15,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48713821/m-48739257,,Question,
+7,16,Regular Expressions Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48713821/m-48749077,0:41,Solution,
+7,17,Super Hard Quiz Of Doom,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746095/m-48742136,1:24,Quiz,RadioButton
+7,18,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746095/m-48701469,,Question,
+7,19,Super Hard Quiz Of Doom Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746095/m-48727519,3:00,Solution,
+7,20,Html,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48682664/m-48734339,0:28,Quiz,CheckBox
+7,21,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48682664/m-48727521,,Question,
+7,22,Html Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48682664/m-48739255,0:26,Solution,
+7,23,Evolution Of Javascript,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/m-48701472,2:21,Video,
+7,24,Crafting Token Specifications,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746096/m-48701473,0:23,Quiz,programming
+7,25,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746096/m-48734340,,Question,
+7,26,Crafting Token Specifications Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746096/m-48652534,0:22,Solution,
+7,27,Learning Regular Expressions,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746097/m-48713743,0:18,Quiz,programming
+7,28,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746097/m-48739261,,Question,
+7,29,Learning Regular Expressions Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746097/m-48624696,1:46,Solution,
+7,30,Context Free Grammar,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48727610/m-48686691,0:27,Quiz,CheckBox
+7,31,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48727610/m-48692745,,Question,
+7,32,Context Free Grammar Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48727610/m-48721411,1:31,Solution,
+7,33,Cfg Generation,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48714375/m-48693756,0:15,Quiz,CheckBox
+7,34,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48714375/m-48680753,,Question,
+7,35,Cfg Generation Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48714375/m-48749071,1:12,Solution,
+7,36,Security,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/m-48718355,6:14,Video,
+7,37,Great Grammar Fixup,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746098/m-48652535,0:41,Quiz,TextBox
+7,38,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746098/m-48723517,,Question,
+7,39,Great Grammar Fixup Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746098/m-48701471,0:50,Solution,
+7,40,Grammar Match Up,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48686745/m-48727520,0:17,Quiz,CheckBox
+7,41,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48686745/m-48746071,,Question,
+7,42,Grammar Match Up Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48686745/m-48652536,1:40,Solution,
+7,43,Parse Trees To Grammars,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48757005/m-48742133,0:25,Quiz,TextBox
+7,44,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48757005/m-48695693,,Question,
+7,45,Parse Trees To Grammars Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48757005/m-48721412,0:47,Solution,
+7,46,List Comprehensions,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48634853/m-48739254,0:30,Quiz,programming
+7,47,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48634853/m-48692746,,Question,
+7,48,List Comprehensions Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48634853/m-48742134,0:36,Solution,
+7,49,Parsing States,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48734384/m-48729287,0:30,Quiz,CheckBox
+7,50,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48734384/m-48745081,,Question,
+7,51,Parsing States Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48734384/m-48714341,1:30,Solution,
+7,52,Parsing Chart,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746099/m-48695695,0:35,Quiz,CheckBox
+7,53,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746099/m-48693755,,Question,
+7,54,Parsing Chart Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48746099/m-48746072,0:47,Solution,
+7,55,Precedence,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48682666/m-48739251,0:13,Quiz,RadioButton
+7,56,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48682666/m-48749070,,Question,
+7,57,Precedence Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48682666/m-48678835,0:53,Solution,
+7,58,Interpretation And Evaluation,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48718389/m-48692747,0:25,Quiz,CheckBox
+7,59,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48718389/m-48719322,,Question,
+7,60,Interpretation And Evaluation Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48718389/m-48701470,1:00,Solution,
+7,61,Environment Lookups,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48682667/m-48753024,0:23,Quiz,TextBox
+7,62,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48682667/m-48693758,,Question,
+7,63,Environment Lookups Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48682667/m-48720254,0:37,Solution,
+7,64,Testing,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48718390/m-48749069,1:56,Quiz,CheckBox
+7,65,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48718390/m-48714342,,Question,
+7,66,Testing Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48718390/m-48745080,1:26,Solution,
+7,67,Debugging,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/m-48749076,3:09,Video,
+7,68,Fix The Bug,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48686746/m-48692749,3:26,Quiz,programming
+7,69,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48686746/m-48749074,,Question,
+7,70,Fix The Bug Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48686746/m-48688885,0:53,Solution,
+7,71,Optimization,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48635737/m-48739253,2:34,Quiz,CheckBox
+7,72,,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48635737/m-48695694,,Question,
+7,73,Optimization Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/e-48635737/m-48739248,3:16,Solution,
+7,74,Optimization at Mozilla,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/m-48730187,1:34,Video,
+7,75,Victory,https://www.udacity.com/course/viewer#!/c-cs262/l-48634854/m-48692748,3:02,Video,
+Final Assesment,1,Underscoring the Magnitude,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48678872/m-48749080,,Quiz,Programming
+Final Assesment,2,Underscoring the Magnitude Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48678872/m-48678838,4:23,Solution,
+Final Assesment,3,Terrible Tuples,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48693797/m-48680757,,Quiz,Programming
+Final Assesment,4,Terrible Tuples Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48693797/m-48697669,2:42,Solution,
+Final Assesment,5,Market Exchange,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48739326/m-48742139,,Quiz,Programming
+Final Assesment,6,Market Exchange Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48739326/m-48688889,5:39,Solution,
+Final Assesment,7,A Gruesome Problem,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48688923/m-48692752,,Quiz,Programming
+Final Assesment,8,A Gruesome Problem Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48688923/m-48729292,2:16,Solution,
+Final Assesment,9,Turning Back Time,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48723578/m-48749081,,Quiz,Programming
+Final Assesment,10,Turning Back Time Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48723578/m-48739270,2:45,Solution,
+Final Assesment,11,Do Not Repeat Repeated Work,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48693798/m-48678839,,Quiz,Programming
+Final Assesment,12,Do Not Repeat Repeated Work Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48693798/m-48729293,3:09,Solution,
+Final Assesment,13,Probing the Unknown,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48688924/m-48698657,,Quiz,Programming
+Final Assesment,14,Probing the Unknown Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48688924/m-48729294,1:31,Solution,
+Final Assesment,15,Discerning the Grammar,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48721447/m-48680758,,Quiz,Programming
+Final Assesment,16,Discerning the Grammar Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48721447/m-48701479,1:43,Solution,
+Final Assesment,17,Implementing RE,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48680799/m-48678837,,Quiz,Programming
+Final Assesment,18,Implementing RE Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48729332/e-48680799/m-48739271,1:53,Solution,
+1,1,Building A Web Browser,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48737122,2:11,Video,
+1,2,Meet The Assistant Instructor,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48682623,0:23,Video,
+1,3,Mozilla Field Trip,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48737123,1:51,Video,
+1,4,Breaking Up Strings,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48736189/m-48646781,2:38,Quiz,Text Box
+1,5,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48736189/m-48698647,,Skip,
+1,6,Breaking Up Strings Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48736189/m-48369851,0:47,Solution,
+1,7,Selecting Substrings,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48752080/m-48726290,1:32,Quiz,Programming
+1,8,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48752080/m-48698648,,Skip,
+1,9,Selecting Substrings Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48752080/m-48726289,1:05,Solition,
+1,10,Split,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683815/m-48747069,0:54,Quiz,Text Box
+1,11,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683815/m-48697544,,Skip,
+1,12,Split Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683815/m-48678740,0:54,Solution,
+1,13,Regular Expressions,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48369853,3:50,Video,
+1,14,Single Digits,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48738178/m-48743082,0:17,Quiz,Checkbox
+1,15,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48738178/m-48695681,,Skip,
+1,16,Single Digits Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48738178/m-48693649,1:26,Solution,
+1,17,Import Re,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48702411,3:36,Video,
+1,18,Findall,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683816/m-48698646,0:29,Quiz,Text Box
+1,19,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683816/m-48713725,,Skip,
+1,20,Findall Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683816/m-48737124,0:38,Solution,
+1,21,Designing Javascript,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48742022,2:06,Video,
+1,22,Concatenation,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48740159/m-48692737,2:20,Quiz,Checkbox
+1,23,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48740159/m-48718347,,,
+1,24,Concatenation Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48740159/m-48688879,1:30,,
+1,25,Regular Expressions At Mozilla,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48697540,1:21,Video,
+1,26,One Or More,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48738179/m-48717358,2:42,Quiz,Checkbox
+1,27,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48738179/m-48688791,,,
+1,28,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48738179/m-48693648,1:23,,
+1,29,Finite State Machines,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48727508,2:48,Video,
+1,30,Fsm Evolution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48713801/m-48678741,0:34,Quiz,Text Box
+1,31,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48713801/m-48742025,,,
+1,32,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48713801/m-48698536,1:06,,
+1,33,Accepting States,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48687842/m-48693749,0:20,Quiz,Checkbox
+1,34,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48687842/m-48746068,,,
+1,35,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48687842/m-48688880,0:56,,
+1,36,Disjunction,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48695682,1:34,Video,
+1,37,Disjunction In Fsms,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48684799/m-48733194,0:21,Quiz,Checkbox
+1,38,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48684799/m-48682622,,Skip,
+1,39,Disjunction In Fsms Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48684799/m-48701464,1:05,Solution,
+1,40,Disjunction Construction,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48740160/m-48646782,0:39,Quiz,Programming
+1,41,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48740160/m-48697545,,Skip,
+1,42,Disjunction Construction Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48740160/m-48698534,0:15,Solution,
+1,43,Options,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48721399,2:55,Video,
+1,44,Escape Sequences,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48688881,3:26,Video,
+1,45,Hyphenation,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48738180/m-48697657,0:45,Quiz,Programming
+1,46,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48738180/m-48713724,,Skip,
+1,47,Hyphenation Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48738180/m-48721401,1:25,Solution,
+1,48,Tricky,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48753017,0:32,Video,
+1,49,Re Challenges,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48700550/m-48743081,1:17,Quiz,Programming
+1,50,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48700550/m-48739229,,Skip,
+1,51,Re Challenges Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48700550/m-48695684,0:49,Solution,
+1,52,Quoted Strings,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48743080,2:18,Video,
+1,53,Structure,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48739231,3:12,Video,
+1,54,Escaping The Escape,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683817/m-48403866,2:28,Quiz,Programming
+1,55,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683817/m-48682619,,Skip,
+1,56,Escaping The Escape Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683817/m-48369852,2:49,Solution,
+1,57,Representing A Fsm,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48698532,3:51,Video,
+1,58,Fsm Simulator,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48725299/m-48721398,3:04,Quiz,Programming
+1,59,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48725299/m-48718348,,Skip,
+1,60,Fsm Simulator Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48725299/m-48697658,1:39,Solution,
+1,61,Fsm Interpretation,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48700551/m-48678831,0:25,Quiz,Programming
+1,62,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48700551/m-48391966,,Skip,
+1,63,Fsm Interpretation Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48700551/m-48697659,0:53,Solution,
+1,64,More FSM Encoding,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48741158/m-48648767,0:17,Quiz,Programming
+1,65,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48741158/m-48680647,,Skip,
+1,66,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48741158/m-48733193,1:15,Solution,
+1,67,Mis Msf,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683818/m-48696580,0:30,Quiz,Programming
+1,68,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683818/m-48719320,,Skip,
+1,69,Mis Msf Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683818/m-48721400,1:22,Solution,
+1,70,Epsilon And Ambiguity,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48648768,1:10,Video,
+1,71,Phone It In,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48699656/m-48701465,0:56,Quiz,Programming
+1,72,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48699656/m-48676961,,Skip,
+1,73,Phone It In Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48699656/m-48727510,1:01,Solution,
+1,74,Inverting The Problem,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683819/m-48680748,0:25,Quiz,Programming
+1,75,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683819/m-48742128,,Skip,
+1,76,Inverting The Problem Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48683819/m-48693748,1:01,Solution,
+1,77,Nondeterminism,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48678832,5:04,Video,
+1,78,Nondet To Det,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48699657/m-48403867,2:30,Quiz,Programming
+1,79,,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48699657/m-48698530,,Skip,
+1,80,Nondet To Det Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/e-48699657/m-48701463,1:33,Solution,
+1,81,Save The World,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48688790,2:09,Video,
+1,82,Conclusion,https://www.udacity.com/course/viewer#!/c-cs262/l-48699658/m-48693650,0:43,Video,
+1 ProblemSet,1,General Concepts,https://www.udacity.com/course/viewer#!/c-cs262/l-48746090/e-48634841/m-48742027,,Quiz,Checkbox
+1 ProblemSet,2,General Concepts Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48746090/e-48634841/m-48723355,5:23,Solution,
+1 ProblemSet,3,Summing Numbers,https://www.udacity.com/course/viewer#!/c-cs262/l-48746090/e-48727599/m-48692643,,Quiz,Program
+1 ProblemSet,4,Summing Numbers Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48746090/e-48727599/m-48698539,2:10,Solution,
+1 ProblemSet,5,Single Hyphenated Words,https://www.udacity.com/course/viewer#!/c-cs262/l-48746090/e-48635729/m-48739072,,Quiz,Program
+1 ProblemSet,6,Single Hyphenated Words Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48746090/e-48635729/m-48739075,1:58,Solution,
+1 ProblemSet,7,Fsm Completion,https://www.udacity.com/course/viewer#!/c-cs262/l-48746090/e-48714370/m-48678745,,Quiz,TextBox
+1 ProblemSet,8,Fsm Completion Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48746090/e-48714370/m-48739076,1:56,Solution,
+1 ProblemSet,9,Simulating Nondeterminism,https://www.udacity.com/course/viewer#!/c-cs262/l-48746090/e-48624730/m-48742030,,Quiz,Program
+1 ProblemSet,10,Simulating Nondeterminism Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48746090/e-48624730/m-48692646,6:00,Solution,
+1 ProblemSet,11,Reading Machine Minds,https://www.udacity.com/course/viewer#!/c-cs262/l-48746090/e-48391994/m-48723360,,Quiz,Program
+1 ProblemSet,12,Reading Machine Minds Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48746090/e-48391994/m-48697546,4:12,Solution,
+1 Office Hours,1,Regular Expressions,https://www.udacity.com/course/viewer#!/c-cs262/l-48299968/m-48733185,1:16,Video,
+1 Office Hours,2,Standard Syntax,https://www.udacity.com/course/viewer#!/c-cs262/l-48299968/m-48743073,0:59,Video,
+1 Office Hours,3,Regular Expression Tools,https://www.udacity.com/course/viewer#!/c-cs262/l-48299968/m-48728283,0:57,Video,
+1 Office Hours,4,Building A Language,https://www.udacity.com/course/viewer#!/c-cs262/l-48299968/m-48733186,0:57,Video,
+2,1,Introduction,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/m-48692652,0:29,Video,
+2,2,Welcome Back,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/m-48692653,1.27,Video,
+2,3,Specification,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/m-48709211,0:52,Video,
+2,4,Html,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/m-48693660,2:05,Video,
+2,5,Really,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48635730/m-48311769,0:31,Quiz,CheckBox
+2,6,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48635730/m-48729184,,Question,
+2,7,Really Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48635730/m-48697556,1:32,Solution,
+2,8,Tags,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/m-48240936,2:09,Video,
+2,9,Interpreting Html,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48686733/m-48680653,0:20,Quiz,CheckBox
+2,10,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48686733/m-48439370,,Question,
+2,11,Interpreting Html Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48686733/m-48721303,0:59,Solution,
+2,12,Taking Html Apart,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48624732/m-48697551,3:04,Quiz,CheckBox
+2,13,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48624732/m-48721309,,Question,
+2,14,Taking Html Apart Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48624732/m-48276994,1:29,Solution,
+2,15,Html Structure,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/m-48692656,2:12,Video,
+2,16,Specifying Tokens,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48634844/m-48692658,1:44,Quiz,Programming
+2,17,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48634844/m-48701391,,Question,
+2,18,Specifying Tokens Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48634844/m-48276991,0:27,Solution,
+2,19,Token Values,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48635732/m-48452886,0:47,Quiz,Radio Button
+2,20,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48635732/m-48276995,,Question,
+2,21,Token Values Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48635732/m-48723361,1:12,Solution,
+2,22,Quoted Strings,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48686734/m-48692651,1:20,Quiz,Programming
+2,23,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48686734/m-48729181,,Question,
+2,24,Quoted Strings Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48686734/m-48742035,0:24,Solution,
+2,25,Whitespace,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48634845/m-48311768,1:18,Quiz,Programming
+2,26,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48634845/m-48678747,,Question,
+2,27,Whitespace Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48634845/m-48452885,0:23,Solution,
+2,28,Lexical Analyzer,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48753054/m-48676973,1:12,Quiz,CheckBox
+2,29,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48753054/m-48701388,,Question,
+2,30,Lexical Analyzer Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48753054/m-48676970,1:29,Solution,
+2,31,Ambiguity,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48391996/m-48742036,0:42,Quiz,CheckBox
+2,32,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48391996/m-48311765,,Question,
+2,33,Ambiguity Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48391996/m-48724294,1:35,Solution,
+2,34,Rule Order,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48652568/m-48703250,1:57,Quiz,Radio Button
+2,35,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48652568/m-48676965,,Question,
+2,36,Rule Order Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48652568/m-48439371,1:54,Solution,
+2,37,Strip Snipping,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/m-48276993,5:38,Video,
+2,38,Lexer Fun Time,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/m-48676972,2:19,Video,
+2,39,Tracking Line Numbers,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/m-48744012,2:17,Video,
+2,40,Crafting Input,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48713808/m-48276992,0:41,Quiz,Programming
+2,41,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48713808/m-48729179,,Question,
+2,42,Crafting Input Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48713808/m-48299845,0:59,Solution,
+2,43,Commented Html,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48634846/m-48311767,3:02,Quiz,CheckBox
+2,44,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48634846/m-48676967,,Question,
+2,45,Commented Html Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48634846/m-48739090,0:48,Solution,
+2,46,Html Comments,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/m-48299846,3:31,Video,
+2,47,Token Counting,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48753055/m-48721300,0:39,Quiz,TextBox
+2,48,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48753055/m-48693657,,Question,
+2,49,Token Counting Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48753055/m-48723384,0:34,Solution,
+2,50,Five Factorial,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/m-48680648,5:30,Video,
+2,51,Honor And Honour,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48719350/m-48240937,1:43,Quiz,TextBox
+2,52,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48719350/m-48692650,,Question,
+2,53,Honor And Honour Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48719350/m-48688796,0:45,Solution,
+2,54,Identifier,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48713809/m-48739087,1:12,Quiz,Programming
+2,55,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48713809/m-48721304,,Question,
+2,56,Identifier Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48713809/m-48739083,0:41,Solution,
+2,57,Numbers,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48682657/m-48678751,0:47,Quiz,Programming
+2,58,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48682657/m-48697554,,Question,
+2,59,Numbers Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48682657/m-48676966,1:28,Solution,
+2,60,The End Of The Line,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48686735/m-48240938,1:21,Quiz,CheckBox
+2,61,,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48686735/m-48701392,,Question,
+2,62,The End Of The Line Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/e-48686735/m-48676968,1:31,Solution,
+2,63,It Could Be Worse,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/m-48724292,1:37,Video,
+2,64,Wrap Up,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/m-48299847,0:52,Video,
+2,65,Syntax,https://www.udacity.com/course/viewer#!/c-cs262/l-48713810/m-48276990,0:37,Video,
+2 Programming Practice-Find Max,1,Maximum,https://www.udacity.com/course/viewer#!/c-cs262/l-48439452/e-48755022/m-48292986,1:19,Quiz,Programming
+2 Programming Practice-Find Max,2,,https://www.udacity.com/course/viewer#!/c-cs262/l-48439452/e-48755022/m-48538403,,Question,
+2 Programming Practice-Find Max,3,Maximum Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48439452/e-48755022/m-48666045,5:00,Solution,
+2 Programming Practice-Find Max,4,Lambda,https://www.udacity.com/course/viewer#!/c-cs262/l-48439452/m-48420237,2:34,Video,
+2 Office Hours,1,Use Of Ply Library,https://www.udacity.com/course/viewer#!/c-cs262/l-48748073/m-48420236,5:14,Video,
+2 Office Hours,2,Use Of Lexer States,https://www.udacity.com/course/viewer#!/c-cs262/l-48748073/m-48381395,2:31,Video,
+2 Office Hours,3,Internationalization,https://www.udacity.com/course/viewer#!/c-cs262/l-48748073/m-48296534,5:00,Video,
+2 Office Hours,4,Long Token Definition Rules,https://www.udacity.com/course/viewer#!/c-cs262/l-48748073/m-48292985,2:55,Video,
+2 Office Hours,5,Ill Formed Input,https://www.udacity.com/course/viewer#!/c-cs262/l-48748073/m-48381394,2:59,Video,
+2 Office Hours,6,Speak Javascript,https://www.udacity.com/course/viewer#!/c-cs262/l-48748073/m-48666044,2:02,Video,
+2 Office Hours,7,Use Of Lexing Elsewhere,https://www.udacity.com/course/viewer#!/c-cs262/l-48748073/m-48420235,9:20,Video,
+2 ProblemSet,1,Hexadecimal Numbers,https://www.udacity.com/course/viewer#!/c-cs262/l-48613430/e-48430517/m-48703287,,Quiz,Programming
+2 ProblemSet,2,Hexadecimal Numbers Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48613430/e-48430517/m-48744045,5:31,Solution,
+2 ProblemSet,3,Email Addresses And Spam,https://www.udacity.com/course/viewer#!/c-cs262/l-48613430/e-48329878/m-48605795,,Quiz,Programming
+2 ProblemSet,4,Email Addresses And Spam Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48613430/e-48329878/m-48686621,3:48,Solution,
+2 ProblemSet,5,Javascript Comments And Keywords,https://www.udacity.com/course/viewer#!/c-cs262/l-48613430/e-48329879/m-48724369,,Quiz,Programming
+2 ProblemSet,6,Javascript Comments And Keywords Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48613430/e-48329879/m-48240974,2:20,Solution,
+2 ProblemSet,7,Javascript Numbers And Strings,https://www.udacity.com/course/viewer#!/c-cs262/l-48613430/e-48425448/m-48748034,,Quiz,Programming
+2 ProblemSet,8,Javascript Numbers And Strings Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48613430/e-48425448/m-48452914,4:53,Solution,
+2 ProblemSet,9,Euclids Algorithm,https://www.udacity.com/course/viewer#!/c-cs262/l-48613430/e-47978568/m-48480523,,Quiz,Programming
+2 ProblemSet,10,00_s_euclids-algorithm.mp4,https://www.udacity.com/course/viewer#!/c-cs262/l-48613430/e-47978568/m-48480522,2:28,Solution,
+2 ProblemSet - Challenge,1,Fsm Optimization,https://www.udacity.com/course/viewer#!/c-cs262/l-48682653/e-48391993/m-48701384,,Quiz,Progamming
+2 ProblemSet - Challenge,2,Fsm Optimization Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48682653/e-48391993/m-48678742,5:24,Solution,
+3,1,Introduction,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48480508,1:27,Video,
+3,2,Bags Of Words,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48714284,2:06,Video,
+3,3,Syntactic Structures,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48452906,2:22,Video,
+3,4,Deriving Sentences,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48391997/m-48746010,0:39,Quiz,CheckBox
+3,5,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48391997/m-48741091,,Question,
+3,6,Deriving Sentences Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48391997/m-48703267,1:06,Solution,
+3,7,Infinity And Beyond,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48713628,1:51,Video,
+3,8,Counting Utterances,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48713811/m-48667961,0:21,Quiz,Radio
+3,9,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48713811/m-48724359,,Question,
+3,10,Counting Utterances Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48713811/m-48624629,0:33,Solution,
+3,11,An Arithmetic Grammar,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48635733/m-48452903,1:31,Quiz,CheckBox
+3,12,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48635733/m-48605792,,Question,
+3,13,An Arithmetic Grammar Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48635733/m-48624630,1:20,Solution,
+3,14,Syntactical Analysis,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48439392,2:33,Video,
+3,15,Statements,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48713812/m-48439373,0:37,Quiz,CheckBox
+3,16,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48713812/m-48240955,,Question,
+3,17,Statements Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48713812/m-48723421,1:50,Solution,
+3,18,Optional Parts,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48635734/m-48682563,1:25,Quiz,TextBox
+3,19,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48635734/m-48605776,,Question,
+3,20,Optional Parts Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48635734/m-48741088,1:21,Solution,
+3,21,More Digits,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48687778,1:49,Video,
+3,22,Grammars And Regexps,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48391998/m-48709242,0:43,Quiz,TextBox
+3,23,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48391998/m-48704247,,Question,
+3,24,Grammars And Regexps Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48391998/m-48682564,1:39,Solution,
+3,25,Context Free Languages,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48744016,2:21,Video,
+3,26,Parentheses,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48714371/m-48635646,0:37,Quiz,CheckBox
+3,27,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48714371/m-48741084,,Question,
+3,28,Parentheses Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48714371/m-48709243,1:53,Solution,
+3,29,Irregularity,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48718386/m-48704254,1:15,Quiz,CheckBox
+3,30,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48718386/m-48439403,,Question,
+3,31,Irregularity Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48718386/m-48738106,1:31,Solution,
+3,32,Intuition,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48703282,3:33,Video,
+3,33,Well Balanced,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48652570/m-48480506,0:22,Quiz,CheckBox
+3,34,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48652570/m-48635648,,Question,
+3,35,Well Balanced Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48652570/m-48709214,1:34,Solution,
+3,36,Extracting Information,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48683744,4:09,Video,
+3,37,Fill In The Tree,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48652571/m-48686607,1:34,Quiz,TextBox
+3,38,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48652571/m-48635643,,Question,
+3,39,Fill In The Tree Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48652571/m-48605788,0:23,Solution,
+3,40,Ambiguity,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48734375/m-48686604,1:51,Quiz,CheckBox
+3,41,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48734375/m-48687776,,Question,
+3,42,Ambiguity Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48734375/m-48744038,0:51,Solution,
+3,43,To The Rescue,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48439374,1:55,Video,
+3,44,Finding Ambiguity,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48682659/m-48204956,0:19,Quiz,CheckBox
+3,45,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48682659/m-48687785,,Question,
+3,46,Finding Ambiguity Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48682659/m-48724367,1:30,Solution,
+3,47,Grammars For Html And Js,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48700483,4:00,Video,
+3,48,Making Valid Html,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48718387/m-48704227,0:25,Quiz,TextBox
+3,49,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48718387/m-48605794,,Question,
+3,50,Making Valid Html Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48718387/m-48699575,0:49,Solution,
+3,51,Revenge Of Javascript,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48683745,2:54,Video,
+3,52,Up To Ten,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48713814/m-48634759,0:52,Quiz,Programming
+3,53,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48713814/m-48240951,,Question,
+3,54,Up To Ten Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48713814/m-48748016,0:40,Solution,
+3,55,Universal Meaning,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48311797,2:29,Video,
+3,56,Fill In The Javascript,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48753057/m-48718312,0:36,Quiz,TextBox
+3,57,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48753057/m-48713626,,Question,
+3,58,Fill In The Javascript Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48753057/m-48452902,1:08,Solution,
+3,59,Javascript Grammar,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48700485,2:41,Video,
+3,60,Valid Statements,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48734376/m-48746006,0:22,Quiz,CheckBox
+3,61,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48734376/m-48439402,,Question,
+3,62,Valid Statements Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48734376/m-48740084,1:26,Solution,
+3,63,Javascript Functions,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48480504,3:59,Video,
+3,64,Translating Javascript,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48652572/m-48634760,0:55,Quiz,Programming
+3,65,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48652572/m-48311800,,Question,
+3,66,Translating Javascript Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48652572/m-48713659,1:24,Solution,
+3,67,Lambda,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48667955,3:39,Video,
+3,68,List Power,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48719351/m-48682566,2:25,Quiz,TextBox
+3,69,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48719351/m-48709235,,Question,
+3,70,List Power Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48719351/m-48240940,0:29,Solution,
+3,71,Anonymous Functions in JavaScript,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48605777,1:29,Video,
+3,72,Working Backwards,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48624734/m-48391909,0:19,Quiz,CheckBox
+3,73,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48624734/m-48683747,,Question,
+3,74,Working Backwards Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48624734/m-48738110,1:01,Solution,
+3,75,Generators,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48738108,2:35,Video,
+3,76,Small Words,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48727608/m-48734212,0:17,Quiz,Programming
+3,77,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48727608/m-48686618,,Question,
+3,78,Small Words Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48727608/m-48704250,0:58,Solution,
+3,79,Checking Valid Strings,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48699574,1:59,Video,
+3,80,Expanding Exp,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48624735/m-48299866,2:47,Quiz,Programming
+3,81,,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48624735/m-48700481,,Question,
+3,82,Expanding Exp Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/e-48624735/m-48391912,3:09,Solution,
+3,83,Tetris,https://www.udacity.com/course/viewer#!/c-cs262/l-48718388/m-48605773,1:12,Video,
+3 ProgrammingPractice - SubSets,1,Subsets,https://www.udacity.com/course/viewer#!/c-cs262/l-48311849/e-48723574/m-48299923,1:57,Quiz,TextBox
+3 ProgrammingPractice - SubSets,2,Subsets Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48311849/e-48723574/m-48587882,0:53,Solution,
+3 ProgrammingPractice - SubSets,3,Party Time,https://www.udacity.com/course/viewer#!/c-cs262/l-48311849/e-48452952/m-48329833,2:35,Quiz,Programming
+3 ProgrammingPractice - SubSets,4,,https://www.udacity.com/course/viewer#!/c-cs262/l-48311849/e-48452952/m-48011964,,Question,
+3 ProgrammingPractice - SubSets,5,Party Time Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48311849/e-48452952/m-48420238,1:35,Solution,
+3 ProgrammingPractice - SubSets,6,Debugging,https://www.udacity.com/course/viewer#!/c-cs262/l-48311849/m-48299924,3:41,Video,
+3 ProgrammingPractice - SubSets,7,Print To Debug,https://www.udacity.com/course/viewer#!/c-cs262/l-48311849/m-48420239,2:30,Video,
+3 ProgrammingPractice - SubSets,8,Bonus Bonus,https://www.udacity.com/course/viewer#!/c-cs262/l-48311849/m-48737127,2:03,Video,
+3 Office Hours,1,Lex And Yacc,https://www.udacity.com/course/viewer#!/c-cs262/l-48746093/m-48680750,3:00,Video,
+3 Office Hours,2,Beyond Context Free,https://www.udacity.com/course/viewer#!/c-cs262/l-48746093/m-48721405,2:21,Video,
+3 Office Hours,3,Testing,https://www.udacity.com/course/viewer#!/c-cs262/l-48746093/m-48698649,4:16,Video,
+3 Office Hours,4,Beyond Parsing,https://www.udacity.com/course/viewer#!/c-cs262/l-48746093/m-48729279,7:16,Video,
+3 ProblemSet,1,Formal Grammar Concepts,https://www.udacity.com/course/viewer#!/c-cs262/l-48703329/e-48299967/m-48737114,,Quiz,Radio Button
+3 ProblemSet,2,Formal Grammar Concepts Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48703329/e-48299967/m-48648762,4:40,Solution,
+3 ProblemSet,3,Reading Machine Minds 2,https://www.udacity.com/course/viewer#!/c-cs262/l-48703329/e-48480580/m-48648761,,Quiz,Programming
+3 ProblemSet,4,Reading Machine Minds 2 Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48703329/e-48480580/m-48532695,5:33,Solution,
+3 ProblemSet,5,Making Ambiguity,https://www.udacity.com/course/viewer#!/c-cs262/l-48703329/e-48439451/m-48702404,,Quiz,CheckBox
+3 ProblemSet,6,Making Ambiguity Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48703329/e-48439451/m-48726276,4:36,Solution,
+3 ProblemSet,7,Infinite Mind Reading,https://www.udacity.com/course/viewer#!/c-cs262/l-48703329/e-48748072/m-48726275,,Quiz,Programming
+3 ProblemSet,8,Infinite Mind Reading Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48703329/e-48748072/m-48369846,5:40,Solution,
+3 ProblemSet,9,Detecting Ambiguity,https://www.udacity.com/course/viewer#!/c-cs262/l-48703329/e-48744095/m-48648759,,Quiz,Programming
+3 ProblemSet,10,Detecting Ambiguity Solution,https://www.udacity.com/course/viewer#!/c-cs262/l-48703329/e-48744095/m-48728281,7:13,Solution,

@@ -21,7 +21,7 @@ class Manual(webapp2.RequestHandler):
         mail = self.request.get("email")
         try:
             global start_date
-            start_date = datetime.datetime.strptime("27/04/2015 00:00:00",'%d/%m/%Y %H:%M:%S')
+            start_date = datetime.datetime.strptime("13/05/2015 00:00:00",'%d/%m/%Y %H:%M:%S')
             end_date = datetime.date.today()
             Duration = {}
 

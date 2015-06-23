@@ -156,9 +156,6 @@ class StudentDetails(webapp2.RequestHandler):
                                         data[count][2],data[count][3],
                                         data[count][4],str(duration)])
             count = count+1
-        #self.result_student_data.append([data[count][0],data[count][1],
-                                       #  data[count][2],data[count][3],
-                                        # data[count][4]," "])
         return 
 
 class TaskWiseData(webapp2.RequestHandler):
@@ -191,22 +188,30 @@ class TaskWiseData(webapp2.RequestHandler):
                             title = urlData[2]
                             moduleType = urlData[3]
                             #result.append([record[0],str(chapter)+" "+str(moduleNo)+" "+title+" "+moduleType])
-                            result.append([record[0],record[1]])
+                            result.append([record[0],record[1],record[2]])
                         else:
-                            result.append([record[0],record[1]])#"Udacity Discussions"])
+                            result.append([record[0],record[1],record[2]])#"Udacity Discussions"])
                     else:
                         domainName = self.getDomain(record[1])
                         if domainName != 'ignore':
-                            result.append([record[0]," "])
+                            result.append([record[0]," ",record[2]])
                 self.getDuration(result)
                 start_date = end_time+datetime.timedelta(hours=12)
             rec_count=0
             for row in self.meta_data:
                 url_data = self.meta_data[row]
+                dic={}
                 if row in self.result_student_data:
-                    final_result.append({"meta":str(url_data[0])+" "+str(url_data[1]),"duration":str(self.result_student_data[row])})
+                    dic["meta"]=(str(url_data[0])+" "+str(url_data[1]))
+                    dic["Mouse"]=(str(url_data[0]+" "+str(url_data[1]))+str(self.result_student_data[row]['Mouse']))
+                    dic["Key"]=(str(url_data[0]+" "+str(url_data[1]))+str(self.result_student_data[row]['Key']))
+                    dic["Input"]=(str(url_data[0]+" "+str(url_data[1]))+str(self.result_student_data[row]['Input']))
+                    dic["duration"]=(str(self.result_student_data[row]['duration']))
+                    final_result.append(dic)
                 else:
-                    final_result.append({"meta":str(url_data[0])+" "+str(url_data[1]),"duration":"0"})
+                    dic["meta"]=(str(url_data[0])+" "+str(url_data[1]))
+                    dic["duration"]="0"
+                    final_result.append(dic)
                 rec_count=rec_count+1
             self.response.write(json.dumps({"data":final_result}))
         else:
@@ -226,7 +231,8 @@ class TaskWiseData(webapp2.RequestHandler):
             for record in data:
                 if record.timeStamp != last:
                     self.student_data.append([record.timeStamp,
-                                              record.urlLink])
+                                              record.urlLink,
+                                              record.eventType])
                     last = record.timeStamp
             return 
         except Exception,e:
@@ -246,7 +252,7 @@ class TaskWiseData(webapp2.RequestHandler):
             for row in data:
                 if row.uRl.eventdata.eventTime !=last:
                     self.student_data.append([row.uRl.eventdata.eventTime,
-                                   row.uRl.url])
+                                   row.uRl.url,row.uRl.eventdata.eventtype])
                     last = row.uRl.eventdata.eventTime
             return 
         except Exception,e:
@@ -289,7 +295,7 @@ class TaskWiseData(webapp2.RequestHandler):
 
     def getDuration(self,data):
         count = 0
-        result = []
+        result = {'Mouse':0,'Input':0,'Key':0}
         while(count<len(data)-1):
             first = datetime.datetime.strptime(data[count][0],
                                                '%d/%m/%Y %H:%M:%S')
@@ -297,14 +303,17 @@ class TaskWiseData(webapp2.RequestHandler):
                                                 '%d/%m/%Y %H:%M:%S')
             duration = second-first
             if data[count][1] in self.result_student_data:
-                self.result_student_data[data[count][1]]=self.result_student_data[data[count][1]]+duration
+                self.result_student_data[data[count][1]]['duration']=self.result_student_data[data[count][1]]['duration']+duration
+                if data[count][2] in self.result_student_data[data[count][1]]:
+                    self.result_student_data[data[count][1]][data[count][2]]=self.result_student_data[data[count][1]][data[count][2]]+1
             else:
-                self.result_student_data[data[count][1]]=duration
+                result['duration']=duration
+                if data[count][2] in result:
+                    result[data[count][2]]=result[data[count][2]]+1
+                self.result_student_data[data[count][1]]=result
             count = count+1
-        #self.result_student_data.append([data[count][0],data[count][1],
-                                       #  data[count][2],data[count][3],
-                                        # data[count][4]," "])
-        return                           
+        return
+    
 app = webapp2.WSGIApplication([
     ('/details/',DetailsHome),
     ('/details/studentdetails',StudentDetails),

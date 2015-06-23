@@ -33,6 +33,9 @@ handlers:
 - url: /student/.*
   script: student.app
 
+- url: /script/
+  static_dir: javascript
+
 - url: /meta/.*
   script: Meta.app
   

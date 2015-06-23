@@ -61,7 +61,7 @@ url = "http://student-monitor.appspot.com/cron/insert"
 ##        mode = dataa[mail][2]
 ##        writer.writerow({'Email':mail,'Mean':mean,'Median':median,'Mode':mode})
 for row in students:
-    data = urllib.urlencode({"email":'ylalithvarma.me@gmail.com'})
+    data = urllib.urlencode({"email":row})
     resp = urllib.urlopen(url,data)
     result = resp.read()
     print(row+" "+result)

@@ -297,6 +297,10 @@ class DashBoard(webapp2.RequestHandler):
         except Exception , e:
             self.response.write(str(e))
 
+class Dash(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template("dash.html")
+        self.response.write(template.render())
 app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/chrome',ChromeData),
@@ -306,4 +310,5 @@ app = webapp2.WSGIApplication([
     ('/getMail',GetMail),
     ('/getusers',GetUsers),
     ('/dashboard',DashBoard),
+    ('/dash',Dash),
 ], debug=True)
