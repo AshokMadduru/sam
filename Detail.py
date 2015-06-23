@@ -203,14 +203,17 @@ class TaskWiseData(webapp2.RequestHandler):
                 dic={}
                 if row in self.result_student_data:
                     dic["meta"]=(str(url_data[0])+" "+str(url_data[1]))
-                    dic["Mouse"]=(str(url_data[0]+" "+str(url_data[1]))+str(self.result_student_data[row]['Mouse']))
-                    dic["Key"]=(str(url_data[0]+" "+str(url_data[1]))+str(self.result_student_data[row]['Key']))
-                    dic["Input"]=(str(url_data[0]+" "+str(url_data[1]))+str(self.result_student_data[row]['Input']))
+                    dic["Mouse"]=str(self.result_student_data[row]['Mouse'])
+                    dic["Key"]=str(self.result_student_data[row]['Key'])
+                    dic["Input"]=str(self.result_student_data[row]['Input'])
                     dic["duration"]=(str(self.result_student_data[row]['duration']))
                     final_result.append(dic)
                 else:
                     dic["meta"]=(str(url_data[0])+" "+str(url_data[1]))
                     dic["duration"]="0"
+                    dic["Mouse"]="0"
+                    dic["Key"]="0"
+                    dic["Input"]="0"
                     final_result.append(dic)
                 rec_count=rec_count+1
             self.response.write(json.dumps({"data":final_result}))
